@@ -6,11 +6,11 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.bind((HOST, PORT))
     print("Bind")
     s.listen()
-    print("Listen")
+    print("Escutando")
     conn, addr = s.accept()
-    print("Connected")
+    print("Conectando")
     with conn:
-        print(f"Connected by {addr}")
+        print(f"Conectado por {addr}")
         while True:
             data = conn.recv(1024)
             print(str(data))
