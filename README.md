@@ -31,6 +31,8 @@ Documente com print e coloque aqui as respostas
 
 ### Resposta 3 extra - nmap:
 
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)
+
 ### 4) Analise usando o wireshark explicando os pacotes.
 
 #### Resposta 4:
