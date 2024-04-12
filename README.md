@@ -46,5 +46,20 @@ Documente com print e coloque aqui as respostas
 
 5) Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark
 
+***
+### Conexão com máquina remota do colega :
+
+1) Subir o tcp server na máquina do colega, verificar o IP da máquina (certifique que ele esteja na mesma rede que você)
+
+2) Executar o programa cliente na sua máquina, não esqueça de modificar o IP para a máquina do seu colega.
+
+3) Demonstre com imagens que a conexão teve sucesso.
+
+4) Usando wireshark mostra conexão filtrando pela portas.
+
+
+
+
+
 
 
