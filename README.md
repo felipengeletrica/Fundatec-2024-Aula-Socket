@@ -17,7 +17,7 @@ Documente com print e coloque aqui as respostas
 ### 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
 
 #### Resposta 1:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/01-Start-PY-Server-8080.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/01-Start-PY-Server-8080.jpg)
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/01-Start-PY-Server.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/01-Start-PY-Server.jpg)
 
 ### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
 
