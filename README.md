@@ -6,6 +6,8 @@ Redes com o professor Felipe Vargas.
 Aluno: Artur Bazzanella Christmann
 Turma: TI23
 
+#
+
 ### Sobre o trabalho
 
 Documente com print e coloque aqui as respostas
