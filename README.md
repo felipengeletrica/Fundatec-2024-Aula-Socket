@@ -16,7 +16,7 @@ Documente com print e coloque aqui as respostas
 
 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
 
-- Resposta: Print Screem em Trabalho_Artur/01-Start-PY-Server-8080.jpg
+### - Resposta: [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/01-Start-PY-Server-8080.jpg)](01-Start-PY-Server-8080.jpg)
 
 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
 
@@ -41,6 +41,8 @@ Documente com print e coloque aqui as respostas
 4) Analise usando o wireshark explicando os pacotes.
 
 5) Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark
+
+
 
 ;-)
 
