@@ -1,6 +1,5 @@
-Estes sockets fazem parte das aulas de redes de computadores!
+# TRABALHO SOCHET 
 
-Enjoy meus alunos!
+Trabalho sockets que fazen parte da aula de Redes como professor Felipe Vargas.
 
-Alunos!!!
-
+## Vamos aprender!!!
