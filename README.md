@@ -77,7 +77,7 @@ EM DESENVOLVIMENTO!
 #### Resposta 5:
 EM DESENVOLVIMENTO!
 
-Thank you, theacher! 😎
+Thank you, teacher! 😎
 
 
 
