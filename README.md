@@ -1,4 +1,4 @@
-# TRABALHO SOCHET 
+# TRABALHO SOCKET 
 
 Trabalho sockets que fazen parte da aula de Redes como professor Felipe Vargas.
 
