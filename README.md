@@ -1,10 +1,10 @@
 # TRABALHO SOCKET 
 
-Trabalho Sockets que faz parte da aula de
-Redes com o professor Felipe Vargas.
+Trabalho Sockets que faz parte da aula de Redes.
 
-Aluno: Artur Bazzanella Christmann
-Turma: TI23
+#### Aluno: Artur Bazzanella Christmann
+#### Professor: Felipe Vargas
+#### Turma: TI23
 
 #
 
