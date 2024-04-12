@@ -10,4 +10,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.sendall(b"Seja bem vindo, RAPA!")
     data = s.recv(1024)
 
-print(f"Received {str(data)}")
+print(f"Recebido {str(data)}")
