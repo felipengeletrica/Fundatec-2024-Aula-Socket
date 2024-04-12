@@ -79,5 +79,8 @@ EM DESENVOLVIMENTO!
 
 Thank you, teacher! 😎
 
+#### Resposta 5.2:
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)
+
 
 
