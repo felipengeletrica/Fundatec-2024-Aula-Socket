@@ -29,7 +29,7 @@ Documente com print e coloque aqui as respostas
 #### Resposta 3:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03-Netstat_Grep.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03-Netstat_Grep.jpg)
 
-### Resposta 3 extra - nmap:
+#### Resposta 3 extra - nmap:
 
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)
 
@@ -38,7 +38,7 @@ Documente com print e coloque aqui as respostas
 #### Resposta 4:
 EM DESENVOLVIMENTO!
 
-### 5) EXTRAS: Setvidor UDP mensagens
+### 5) EXTRAS: Servidor UDP and Mensages.
 
 #### Resposta 5.1:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/04-Start-PY-Server-UDP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/04-Start-PY-Server-UDP.jpg)
