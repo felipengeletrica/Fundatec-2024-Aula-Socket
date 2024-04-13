@@ -130,33 +130,34 @@ O código Python implementa um servidor TCP simples que aceita conexões de clie
 
 ##### Analise de cada parte do código de forma didática:
 
-- - - Importação de Módulos:
+##### Importação de Módulos:
 - Import socket: Importa o módulo socket para lidar com comunicação em rede.
-- Definição do Endereço e Porta:
 
+##### Definição do Endereço e Porta:
 - HOST = "127.0.0.1": Define o endereço IP padrão de loopback (localhost).
 - PORT = 65432: Define a porta na qual o servidor irá escutar por conexões.
 
-- - - Criação do Socket do Servidor:
+##### Criação do Socket do Servidor:
 - with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:: Cria um novo socket TCP (socket.SOCK_STREAM) usando o endereço IPv4 (socket.AF_INET). O socket é atribuído à variável s.
 
-- - - Bind (Associação):
+##### Bind (Associação):
 - s.bind((HOST, PORT)): Associa o socket a um endereço e porta específicos. Neste caso, o endereço é HOST e a porta é PORT.
 
-- - - Listen (Escuta):
+##### Listen (Escuta):
 - s.listen(): Coloca o socket em modo de escuta, permitindo que ele aceite conexões entrantes.
 
-- - - Aceitação de Conexões:
+##### Aceitação de Conexões:
 - conn, addr = s.accept(): Aceita uma nova conexão de cliente. O método accept() bloqueia a execução do código até que uma conexão seja estabelecida.
 - conn é um novo socket que representa a conexão com o cliente.
 - addr é uma tupla contendo o endereço IP e o número da porta do cliente.
 
-- - - Comunicação com o Cliente:
+##### Comunicação com o Cliente:
 - with conn:: Define um bloco de código que será executado enquanto a conexão estiver ativa.
 - data = conn.recv(1024): Recebe dados do cliente. O argumento 1024 especifica o número máximo de bytes a serem recebidos de uma vez.
 - print(str(data)): Imprime os dados recebidos do cliente no console.
 - conn.sendall(data): Envia de volta para o cliente os dados recebidos. Neste caso, o - servidor simplesmente ecoa as mensagens de volta para o cliente.
-- Esse código forma a base de um servidor TCP simples que pode ser usado para comunicação em rede
+
+Esse código forma a base de um servidor TCP simples que pode ser usado para comunicação em rede
 
 ### 4) Analise usando o wireshark explicando os pacotes.
 
