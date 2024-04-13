@@ -97,19 +97,19 @@ EM DESENVOLVIMENTO!
 
 O código implementa um servidor TCP multithreaded capaz de lidar com múltiplos clientes simultaneamente, utilizando a classe socketserver.ThreadingTCPServer do módulo socketserver do Python.
 
-- Bind (associação):
-- - A linha server = socketserver.ThreadingTCPServer((HOST, PORT), MyTCPHandler) cria uma instância do servidor TCP multithreaded.
-- - O método ThreadingTCPServer é usado para associar (bind) o endereço HOST (neste caso, "localhost") e a porta PORT (65432) ao servidor.
-- - Essa operação é essencialmente o processo de "amarrar" o servidor a um endereço e porta específicos, para que ele possa aceitar conexões de entrada nesse endereço e porta.
+##### Bind (associação):
+- A linha server = socketserver.ThreadingTCPServer((HOST, PORT), MyTCPHandler) cria uma instância do servidor TCP multithreaded.
+- O método ThreadingTCPServer é usado para associar (bind) o endereço HOST (neste caso, "localhost") e a porta PORT (65432) ao servidor.
+- Essa operação é essencialmente o processo de "amarrar" o servidor a um endereço e porta específicos, para que ele possa aceitar conexões de entrada nesse endereço e porta.
 
-- Listen (escuta):
-- - Após o bind, a linha server.serve_forever() ativa o servidor.
-- - Dentro do método serve_forever(), a implementação subjacente do servidor entra em um loop para aguardar e manipular conexões entrantes.
-- - Durante este tempo, o servidor está "ouvindo" (listen) na porta especificada (PORT) por conexões entrantes.
+##### Listen (escuta):
+- Após o bind, a linha server.serve_forever() ativa o servidor.
+- Dentro do método serve_forever(), a implementação subjacente do servidor entra em um loop para aguardar e manipular conexões entrantes.
+- Durante este tempo, o servidor está "ouvindo" (listen) na porta especificada (PORT) por conexões entrantes.
 
-- - Estado da conexão:
-- - O servidor está constantemente em um estado de escuta (listen) por novas conexões.
-- - Quando uma conexão é estabelecida, o servidor cria uma nova thread para lidar com essa conexão, permitindo que o servidor continue a ouvir por novas conexões enquanto atende aos clientes existentes.
+##### Estado da conexão:
+- O servidor está constantemente em um estado de escuta (listen) por novas conexões.
+- Quando uma conexão é estabelecida, o servidor cria uma nova thread para lidar com essa conexão, permitindo que o servidor continue a ouvir por novas conexões enquanto atende aos clientes existentes.
 
 Este servidor TCP multithreaded é capaz de aceitar conexões de múltiplos clientes simultaneamente, mantendo um estado de escuta constante para novas conexões e associando essas conexões aos threads de tratamento correspondentes.
 
