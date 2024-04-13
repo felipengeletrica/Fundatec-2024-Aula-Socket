@@ -17,6 +17,15 @@ Documente com print e coloque aqui as respostas
 ### 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
 
 #### Resposta 1:
+
+Ao subir o Servidor Simples com o comando "python Server-TCP-simple.py", que é executado através de um script em Python, o serviço primitivo de transporte de soquetes TCP é iniciado. Isso envolve os seguintes estados da conexão:
+
+Bind: O servidor associa um endereço local (por exemplo, um endereço IP ou DNS, neste caso "localhost", e um número de porta, que neste script é a porta 65432) ao soquete.
+
+Listen: O servidor fica pronto para receber conexões entrantes, anunciando a disponibilidade para conexão e especificando o tamanho da fila de conexões pendentes.
+
+Com isso, o servidor está pronto para estabelecer conexões ativas, enviar e receber dados através delas.
+
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/01-Start-PY-Server.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/01-Start-PY-Server.jpg)
 
 ### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
