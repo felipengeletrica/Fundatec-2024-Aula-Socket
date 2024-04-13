@@ -26,6 +26,7 @@ Listen: O servidor fica pronto para receber conexões entrantes, anunciando a di
 
 Com isso, o servidor está pronto para estabelecer conexões ativas, enviar e receber dados através delas.
 
+#### Print Screem:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/01-Start-PY-Server.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/01-Start-PY-Server.jpg)
 
 ### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
@@ -42,6 +43,7 @@ Uma chamada SOCKET bem-sucedida retorna um descritor de arquivo comum que será 
 
 Apresentando na tela o valor recebido "Hello, world".
 
+#### Print Screem:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/02-Hello-World.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/02-Hello-World.jpg)
 
 ### 3) Analise o código fonte
@@ -73,12 +75,14 @@ Executando o comando "netstat -an | grep "65432" lista todas as conexões de red
 
 O comando completo retorna informações sobre as conexões de rede que estão utilizando a porta "65432" no sistema.
 
+#### Print Screem:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03-Netstat_Grep.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03-Netstat_Grep.jpg)
 
 #### Resposta 3 extra: nmap:
 
 O comando "nmap -p65432 localhost" executa uma varredura de portas na máquina local (localhost) para verificar se a porta 65432 está aberta. O nmap é uma ferramenta de segurança e auditoria de rede que mostra quais portas estão abertas em um sistema, ajudando a identificar possíveis vulnerabilidades.
 
+#### Print Screem:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)
 
 ### 4) Analise usando o wireshark explicando os pacotes.
@@ -111,7 +115,8 @@ Ambos estão configurados para se comunicar através do endereço IP 127.0.0.1 (
 
 Essa sequência de pacotes é observada no Wireshark e representa a troca de mensagens entre o servidor e o cliente durante a comunicação TCP. Cada pacote tem um papel específico na estabelecimento, transmissão e encerramento da conexão TCP entre os dois.
 
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)
+#### Print Screem:
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/06-Analise-Pacotes.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/06-Analise-Pacotes.jpg)
 
 ##### ********************************************* 
 
@@ -146,6 +151,7 @@ Mesmo resultado da pergunta 2 logo acima. 👆
 
 Entretanto, fiz a execução do Client UDP Simple (Client-UDP-Simple.py) e tive o seguinte resultado:
 
+#### Print Screem:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)
 
 ### 3) Analise o código fonte
@@ -196,7 +202,6 @@ EM DESENVOLVIMENTO!
 Em um servidor TCP, a porta do servidor (neste caso, 65432) permanece a mesma para todas as conexões. A porta de origem do cliente é que muda a cada nova conexão. Isso ocorre porque cada conexão TCP é identificada por um conjunto único de endereço IP e porta de origem e destino. O servidor mantém a mesma porta para ouvir por novas conexões, enquanto as portas de origem dos clientes variam para distinguir entre as diferentes conexões.
 
 ##### Print Screem 1:
-
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-2.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-2.jpg)
 
 ##### Print Screem 2:
