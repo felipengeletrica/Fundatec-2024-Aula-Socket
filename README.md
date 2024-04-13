@@ -86,15 +86,6 @@ O comando "nmap -p65432 localhost" executa uma varredura de portas na máquina l
 #### Resposta 4:
 EM DESENVOLVIMENTO!
 
-### 5) EXTRAS: Servidor UDP and Mensages.
-
-#### Resposta 5.1:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/04-Start-PY-Server-UDP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/04-Start-PY-Server-UDP.jpg)
-
-#### Resposta 5.2:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)
-
-
 ***
 
 ### Multiserver TCP :
