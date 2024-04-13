@@ -32,7 +32,6 @@ Com isso, o servidor está pronto para estabelecer conexões ativas, enviar e re
 
 #### Resposta 2:
 
-
 Neste script, que é executado via "localhost" (127.0.0.1) na porta "65432", envia uma mensagem de teste ("Hello, world!").
 
 As quatro primeiras primitivas na lista são executadas pelos servidores nessa ordem: a primitiva SOCKET cria um novo ponto final e aloca espaço de tabela para ele na entidade de transporte.
@@ -85,9 +84,36 @@ O comando "nmap -p65432 localhost" executa uma varredura de portas na máquina l
 ### 4) Analise usando o wireshark explicando os pacotes.
 
 #### Resposta 4:
-EM DESENVOLVIMENTO!
+Wireshark para explicar os pacotes trocados entre o servidor e o cliente durante a comunicação.
 
-***
+#### Preparação:
+O servidor está rodando o echo-server.py e o cliente está rodando o echo-client.py.
+Ambos estão configurados para se comunicar através do endereço IP 127.0.0.1 (localhost) e a porta 65432.
+
+#### Estabelecimento da Conexão:
+- O cliente envia um pacote SYN (synchronize) para iniciar a conexão com o servidor.
+- O servidor responde com um pacote SYN-ACK (synchronize-acknowledgement) confirmando a conexão.
+- O cliente então envia um pacote ACK (acknowledgement) confirmando a conexão, estabelecendo assim a conexão TCP.
+
+#### Envio de Mensagem:
+- O cliente envia um pacote contendo a mensagem "Hello, world" para o servidor.
+- O servidor recebe a mensagem e envia um pacote de confirmação (ACK) de volta para o cliente.
+
+#### Recebimento da Mensagem:
+- O servidor processa a mensagem recebida e envia um pacote contendo a mensagem de volta para o cliente.
+- O cliente recebe a mensagem e confirma o recebimento com um pacote ACK.
+
+#### Encerramento da Conexão:
+- Após a troca de mensagens, o cliente envia um pacote FIN (finalize) para encerrar a conexão.
+- O servidor responde com um pacote ACK para confirmar o encerramento da conexão.
+- O servidor então também envia um pacote FIN para encerrar a conexão do seu lado.
+- O cliente responde com um pacote ACK confirmando o encerramento da conexão do lado do servidor.
+
+Essa sequência de pacotes é observada no Wireshark e representa a troca de mensagens entre o servidor e o cliente durante a comunicação TCP. Cada pacote tem um papel específico na estabelecimento, transmissão e encerramento da conexão TCP entre os dois.
+
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)
+
+##### ********************************************* 
 
 ### Multiserver TCP :
 
