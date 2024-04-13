@@ -90,16 +90,22 @@ EM DESENVOLVIMENTO!
 
 ### Multiserver TCP :
 
-### 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
+### 1) Subir o tcp server multiserver explicar os estados da conexão, bind, listen etc.
 
 #### Resposta 1:
-EM DESENVOLVIMENTO!
 
+Um servidor TCP simples que pode lidar com múltiplas conexões simultaneamente, utilizando a classe socketserver.TCPServer do módulo socketserver do Python. 
 
-### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
+Resumindo, este código cria um servidor TCP simples que aceita conexões na porta 65432 e, para cada conexão, recebe os dados enviados pelo cliente, converte-os para letras maiúsculas e os envia de volta ao cliente. O servidor é capaz de lidar com múltiplas conexões simultaneamente.
+
+### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão. ()
 
 #### Resposta 2:
-EM DESENVOLVIMENTO!
+Mesmo resultado da pergunta 2 logo acima.
+
+Entretanto, fiz a execução do Client UDP Simple (Client-UDP-Simple.py) e tive o seguinte resultado:
+
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)
 
 ### 3) Analise o código fonte
 
