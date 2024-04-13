@@ -30,7 +30,7 @@ Com isso, o servidor está pronto para estabelecer conexões ativas, enviar e re
 
 ### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
 
-#### Resposta 2: [Resposta 2](#resposta2)
+### Resposta 2: [Resposta 2](#resposta2)
 
 
 Neste script, que é executado via "localhost" (127.0.0.1) na porta "65432", envia uma mensagem de teste ("Hello, world!").
