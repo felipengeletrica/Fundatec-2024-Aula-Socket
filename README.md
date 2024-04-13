@@ -30,7 +30,7 @@ Com isso, o servidor está pronto para estabelecer conexões ativas, enviar e re
 
 ### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
 
-### Resposta 2:  [Ir para Resposta 2](#resposta-2)
+#### Resposta 2:
 
 
 Neste script, que é executado via "localhost" (127.0.0.1) na porta "65432", envia uma mensagem de teste ("Hello, world!").
@@ -116,8 +116,7 @@ Este servidor TCP multithreaded é capaz de aceitar conexões de múltiplos clie
 ### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão. ()
 
 #### Resposta 2:
-Mesmo resultado da pergunta 2 logo acima. [Resposta 2](#resposta-2)
-
+Mesmo resultado da pergunta 2 logo acima. 👆
 
 Entretanto, fiz a execução do Client UDP Simple (Client-UDP-Simple.py) e tive o seguinte resultado:
 
