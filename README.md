@@ -128,7 +128,7 @@ Entretanto, fiz a execução do Client UDP Simple (Client-UDP-Simple.py) e tive 
 
 O código Python implementa um servidor TCP simples que aceita conexões de clientes, recebe mensagens dos clientes, imprime essas mensagens no console e envia de volta para os clientes.
 
-### Analise de cada parte do código de forma didática:
+##### Analise de cada parte do código de forma didática:
 
 - - - Importação de Módulos:
 - Import socket: Importa o módulo socket para lidar com comunicação em rede.
