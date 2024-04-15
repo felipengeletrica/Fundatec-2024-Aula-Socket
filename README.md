@@ -117,8 +117,8 @@ As principais diferenças entre eles:
 - Cabeçalho: Os cabeçalhos de TCP e UDP são diferentes. O cabeçalho TCP é maior, incluindo informações como números de sequência, confirmação, janelas de recebimento e checksum, enquanto o cabeçalho UDP é menor, incluindo apenas informações básicas, como portas de origem e destino e um checksum.
 
 - Exemplos de uso:
-a) TCP é usado em aplicativos que requerem transferência de dados confiável e ordenada, como navegadores da web, e-mails, transferência de arquivos (FTP) e streaming de vídeo.
-b) UDP é usado em aplicativos que precisam de baixa latência e podem tolerar perda de dados, como transmissões ao vivo, jogos online e DNS.
+\t- a) TCP é usado em aplicativos que requerem transferência de dados confiável e ordenada, como navegadores da web, e-mails, transferência de arquivos (FTP) e streaming de vídeo.
+\t- b) UDP é usado em aplicativos que precisam de baixa latência e podem tolerar perda de dados, como transmissões ao vivo, jogos online e DNS.
 
 ##### Um exemplo prático de uso seria o seguinte:
 
