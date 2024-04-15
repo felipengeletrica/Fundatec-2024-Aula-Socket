@@ -104,6 +104,8 @@ Essa sequência de pacotes é observada no Wireshark e representa a troca de men
 
 ### 5) Diferencie a conexão UDP de TCP
 
+#### Resposta 5:
+
 UDP (User Datagram Protocol) e TCP (Transmission Control Protocol) são dois protocolos de transporte usados na Internet.
 
 As principais diferenças entre eles:
