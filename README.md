@@ -130,8 +130,31 @@ As principais diferenças entre eles:
 
 ### Simple server UDP:
 
+### 1) Subir o UDP server simple explicar os estados da conexão, bind, listen etc.
 
+#### Resposta 1:
 
+Esse código implementa um servidor UDP simples em Python. Aqui está uma explicação linha por linha:
+
+- import socket: Importa o módulo socket do Python, que fornece suporte para a implementação de sockets de rede.
+
+- HOST, PORT = "localhost", 65431: Define o endereço IP do host (localhost neste caso, indicando o próprio computador) e o número da porta (65431) para o servidor UDP.
+
+- sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM): Cria um objeto de socket UDP usando a família de endereços AF_INET (IPv4) e o tipo de socket SOCK_DGRAM (UDP).
+
+- while True:: Inicia um loop infinito para o servidor continuar recebendo e respondendo a mensagens.
+
+- data = input("Message:"): Solicita ao usuário que insira uma mensagem para ser enviada ao servidor.
+
+- sock.sendto(bytes(data + "\n", "utf-8"), (HOST, PORT)): Converte a mensagem em bytes usando a codificação UTF-8 e a envia para o endereço (HOST, PORT) especificado.
+
+- received = str(sock.recv(1024), "utf-8"): Espera receber uma mensagem de volta do cliente. O número 1024 indica o tamanho máximo dos dados recebidos em bytes. A mensagem recebida é decodificada de bytes para uma string UTF-8.
+
+- print("Sent: {}".format(data)): Exibe a mensagem enviada pelo servidor.
+
+- print("Received: {}".format(received)): Exibe a mensagem recebida do cliente.
+
+É importante observar que, ao contrário do TCP, o UDP é um protocolo sem conexão, o que significa que não há etapas de estabelecimento de conexão (bind, listen, etc.) como no TCP. Cada mensagem é enviada independentemente, sem garantia de entrega ou ordem.
 
 
 
