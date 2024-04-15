@@ -6,7 +6,7 @@ Trabalho Sockets que faz parte da aula de Redes.
 #### Professor: Felipe Vargas
 #### Turma: TI23
 
-#
+***
 
 ### Sobre o trabalho
 
@@ -69,22 +69,6 @@ Quando uma conexão é recebida (s.accept()), o servidor aceita a conexão e obt
 
 Esses códigos implementam um simples sistema de eco, em que o servidor ecoa de volta ao cliente qualquer mensagem que ele envie.
 
-#### Resposta 3 extra: netstat e grep:
-
-Executando o comando "netstat -an | grep "65432" lista todas as conexões de rede e as estatísticas de conexão do sistema. O pipe (|) redireciona a saída desse comando para o comando grep "65432", que filtra as linhas que contenham o número da porta "65432". 
-
-O comando completo retorna informações sobre as conexões de rede que estão utilizando a porta "65432" no sistema.
-
-#### Print Screem:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03-Netstat_Grep.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03-Netstat_Grep.jpg)
-
-#### Resposta 3 extra: nmap:
-
-O comando "nmap -p65432 localhost" executa uma varredura de portas na máquina local (localhost) para verificar se a porta 65432 está aberta. O nmap é uma ferramenta de segurança e auditoria de rede que mostra quais portas estão abertas em um sistema, ajudando a identificar possíveis vulnerabilidades.
-
-#### Print Screem:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)
-
 ### 4) Analise usando o wireshark explicando os pacotes.
 
 #### Resposta 4:
@@ -118,11 +102,49 @@ Essa sequência de pacotes é observada no Wireshark e representa a troca de men
 #### Print Screem:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/06-Analise-Pacotes.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/06-Analise-Pacotes.jpg)
 
-##### ********************************************* 
+### 5) Diferencie a conexão UDP de TCP
+
+UDP (User Datagram Protocol) e TCP (Transmission Control Protocol) são dois protocolos de transporte usados na Internet.
+
+As principais diferenças entre eles:
+
+- Confiabilidade da conexão: TCP é orientado à conexão, o que significa que estabelece uma conexão antes de enviar dados e garante a entrega ordenada e confiável dos dados. UDP, por outro lado, é não orientado à conexão e não garante a entrega dos dados.
+
+- Controle de fluxo e congestionamento: TCP tem mecanismos embutidos para controle de fluxo e congestionamento, ajustando a taxa de transmissão com base nas condições da rede. UDP não possui esses mecanismos.
+
+- Cabeçalho: Os cabeçalhos de TCP e UDP são diferentes. O cabeçalho TCP é maior, incluindo informações como números de sequência, confirmação, janelas de recebimento e checksum, enquanto o cabeçalho UDP é menor, incluindo apenas informações básicas, como portas de origem e destino e um checksum.
+
+- Exemplos de uso:
+
+- - TCP é usado em aplicativos que requerem transferência de dados confiável e ordenada, como navegadores da web, e-mails, transferência de arquivos (FTP) e streaming de vídeo.
+- - UDP é usado em aplicativos que precisam de baixa latência e podem tolerar perda de dados, como transmissões ao vivo, jogos online e DNS.
+
+##### Um exemplo prático de uso seria o seguinte:
+
+- A pessoa que estiver assistindo a uma transmissão ao vivo, como um jogo de futebol, provavelmente está recebendo os dados através do UDP. Se alguns pacotes de dados forem perdidos no caminho, o sistema não tentará recuperá-los, pois a prioridade é manter a transmissão fluindo em tempo real.
+
+- Por outro lado, se estiver baixando um arquivo grande, como um vídeo, é mais provável que o download seja feito via TCP. Nesse caso, a confiabilidade da entrega é crucial e, se um pacote for perdido, o TCP solicitará que ele seja reenviado para garantir que todos os dados sejam recebidos corretamente.
+
+***
+
+### Simple server UDP:
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Multiserver TCP :
 
-### 1) Subir o tcp server multiserver explicar os estados da conexão, bind, listen etc.
+### 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
 
 #### Resposta 1:
 
@@ -234,6 +256,30 @@ Em um servidor TCP, a porta do servidor (neste caso, 65432) permanece a mesma pa
 
 ##### Print Screem 2:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)
+
+
+
+
+Extra:
+
+#### Resposta 3 extra: netstat e grep:
+
+Executando o comando "netstat -an | grep "65432" lista todas as conexões de rede e as estatísticas de conexão do sistema. O pipe (|) redireciona a saída desse comando para o comando grep "65432", que filtra as linhas que contenham o número da porta "65432". 
+
+O comando completo retorna informações sobre as conexões de rede que estão utilizando a porta "65432" no sistema.
+
+#### Print Screem:
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03-Netstat_Grep.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03-Netstat_Grep.jpg)
+
+#### Resposta 3 extra: nmap:
+
+O comando "nmap -p65432 localhost" executa uma varredura de portas na máquina local (localhost) para verificar se a porta 65432 está aberta. O nmap é uma ferramenta de segurança e auditoria de rede que mostra quais portas estão abertas em um sistema, ajudando a identificar possíveis vulnerabilidades.
+
+#### Print Screem:
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)
+
+
+
 
 
 
