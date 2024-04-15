@@ -156,14 +156,19 @@ Esse código implementa um servidor UDP simples em Python. Aqui está uma explic
 
 É importante observar que, ao contrário do TCP, o UDP é um protocolo sem conexão, o que significa que não há etapas de estabelecimento de conexão (bind, listen, etc.) como no TCP. Cada mensagem é enviada independentemente, sem garantia de entrega ou ordem.
 
+2) Executar o programa de cliente simple server UDP e verificar os estados da conexão.
+
+#### Resposta 2:
+
+Implementa um cliente UDP simples, não há estados de conexão a serem verificados. Isso ocorre porque o UDP é um protocolo sem conexão, o que significa que não há estabelecimento de conexão, manutenção de estado de conexão ou terminação de conexão como no TCP. Cada mensagem é tratada independentemente e não há garantia de entrega ou ordem das mensagens.
+
+Portanto, não há "estados de conexão" específicos para verificar em um cliente UDP.
 
 
 
 
 
-
-
-
+***
 
 
 ### Multiserver TCP :
