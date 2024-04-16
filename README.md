@@ -210,8 +210,7 @@ Essa sequência de pacotes é observada no Wireshark e representa a troca de men
 
 ***
 
-
-EM DESENVOLVIMENTO!!!
+EM ANÁLISE!!!! 
 
 
 ### Multiserver TCP :
@@ -238,31 +237,10 @@ O código implementa um servidor TCP multithreaded capaz de lidar com múltiplos
 
 Este servidor TCP multithreaded é capaz de aceitar conexões de múltiplos clientes simultaneamente, mantendo um estado de escuta constante para novas conexões e associando essas conexões aos threads de tratamento correspondentes.
 
-### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão. ()
+### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
 
 #### Resposta 2:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Entretanto, fiz a execução do Client UDP Simple (Client-UDP-Simple.py) e tive o seguinte resultado:
 
 #### Print Screem:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)
