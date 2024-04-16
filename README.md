@@ -337,22 +337,34 @@ Em um servidor TCP, a porta do servidor (neste caso, 65432) permanece a mesma pa
 ***
 ### Conexão com máquina remota do colega :
 
-EM DESENVOLVIMENTO!
-
 1) Subir o tcp server na máquina do colega, verificar o IP da máquina (certifique que ele esteja na mesma rede que você)
+
+#### Resposta 1:
 
 Subi o server emcasa do Debian 12 Server e executei o Server-TCP-Multicliente.py rodando no IP 192.168.0.15.
 
-##### Print Screem 1:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)
-
 2) Executar o programa cliente na sua máquina, não esqueça de modificar o IP para a máquina do seu colega.
+
+#### Resposta 2:
+
+Executei o arquivo Client-TCP-Simple.py na máquina cliente de IP 192.168.0.20 com o IP 192.168.0.15 do servidor configurado no arquivo e tive resposta da mendagem "Received b'HELLO, WORLD'".
 
 3) Demonstre com imagens que a conexão teve sucesso.
 
+#### Resposta 3:
+
+##### Print Screem Server 192.168.0.15:
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/08-Server-TCP-Multicliente-srvblur.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/08-Server-TCP-Multicliente-srvblur.png)
+
+##### Print Screem Server 192.168.0.20:
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/07-Client-TCP-Simple-blur.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/07-Client-TCP-Simple-blur.png)
+
 4) Usando wireshark mostra conexão filtrando pela portas.
 
+# EM DESENVOLVIMENTO RESPOSTA 4!
+
 ***
+
 Exemplo colocando código
 
 ```python
