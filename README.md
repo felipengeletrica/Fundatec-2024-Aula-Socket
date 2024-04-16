@@ -361,13 +361,13 @@ print(f"Received {str(data)}")
 
 #### Resposta 1:
 
-Subi o server emcasa do Debian 12 Server e executei o Server-TCP-Multicliente.py rodando no IP 192.168.0.15.
+Subi o server, em casa, com Debian 12 Server e executei o arquivo  Server-TCP-Multicliente.py configurado o IP 192.168.0.15.
 
 ### 2) Executar o programa cliente na sua máquina, não esqueça de modificar o IP para a máquina do seu colega.
 
 #### Resposta 2:
 
-Executei o arquivo Client-TCP-Simple.py na máquina cliente de IP 192.168.0.20 com o IP 192.168.0.15 do servidor configurado no arquivo e tive resposta da mendagem "Received b'HELLO, WORLD'".
+Executei o arquivo Client-TCP-Simple.py na máquina cliente de IP 192.168.0.20 que envia mensagem para o servidor de IP 192.168.0.15 configurado no arquivo e tive resposta da mendagem "Received b'HELLO, WORLD'".
 
 ### 3) Demonstre com imagens que a conexão teve sucesso.
 
@@ -383,7 +383,7 @@ Executei o arquivo Client-TCP-Simple.py na máquina cliente de IP 192.168.0.20 c
 
 #### Resposta 4:
 
-No envio da mensagem pelo sistema em Python, como demonstrado acima, o sucesso em subir o servidor configurado para receber mensagens do cliente foi um suvcesso e no print screem podemos notar a mensagem desfragmanetada porém "legível para humanos".
+No envio da mensagem pelo sistema em Python, como demonstrado acima, o sucesso em subir o servidor configurado para receber mensagens do cliente foi um sucesso e no print screem podemos notar a mensagem desfragmanetada porém "legível para humanos".
 
 ##### Print Screem Cliente em 192.168.0.20:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/09-Wireshark-p65432-HelloTeacher.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/09-Wireshark-p65432-HelloTeacher.png)
