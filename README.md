@@ -334,6 +334,39 @@ Em um servidor TCP, a porta do servidor (neste caso, 65432) permanece a mesma pa
 ##### Print Screem 2:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)
 
+***
+### Conexão com máquina remota do colega :
+
+1) Subir o tcp server na máquina do colega, verificar o IP da máquina (certifique que ele esteja na mesma rede que você)
+
+2) Executar o programa cliente na sua máquina, não esqueça de modificar o IP para a máquina do seu colega.
+
+3) Demonstre com imagens que a conexão teve sucesso.
+
+4) Usando wireshark mostra conexão filtrando pela portas.
+
+***
+Exemplo colocando código
+
+```python
+# echo-client.py
+
+import socket
+
+HOST = "127.0.0.1"  # The server's hostname or IP address
+PORT = 65432  # The port used by the server
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.connect((HOST, PORT))
+    s.sendall(b"Hello, world")
+    data = s.recv(1024)
+
+print(f"Received {str(data)}")
+
+```
+
+***
+
 ## Extra:
 
 #### Extra: netstat e grep:
