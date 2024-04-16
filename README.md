@@ -337,6 +337,8 @@ Em um servidor TCP, a porta do servidor (neste caso, 65432) permanece a mesma pa
 ***
 ### Conexão com máquina remota do colega :
 
+EM DESENVOLVIMENTO!
+
 1) Subir o tcp server na máquina do colega, verificar o IP da máquina (certifique que ele esteja na mesma rede que você)
 
 2) Executar o programa cliente na sua máquina, não esqueça de modificar o IP para a máquina do seu colega.
