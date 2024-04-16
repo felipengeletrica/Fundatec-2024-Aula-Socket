@@ -210,12 +210,9 @@ Essa sequência de pacotes é observada no Wireshark e representa a troca de men
 
 ***
 
-EM ANÁLISE!!!! 
-
-
 ### Multiserver TCP :
 
-### 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
+### 1) Subir o tcp server multicliente explicar os estados da conexão, bind, listen etc.
 
 #### Resposta 1:
 
@@ -241,6 +238,18 @@ Este servidor TCP multithreaded é capaz de aceitar conexões de múltiplos clie
 
 #### Resposta 2:
 
+Neste script, que é executado via "localhost" (127.0.0.1) na porta "65432", envia uma mensagem de teste ("Hello, world!").
+
+As quatro primeiras primitivas na lista são executadas pelos servidores nessa ordem: a primitiva SOCKET cria um novo ponto final e aloca espaço de tabela para ele na entidade de transporte.
+
+Os parâmetros da chamada especificam o formato de endereçamento a ser usado, o tipo de serviço desejado (por exemplo, um fluxo de bytes confiável) e o protocolo.
+
+Uma chamada SOCKET bem-sucedida retorna um descritor de arquivo comum que será usado nas chamadas subsequentes, exatamente como uma chamada OPEN.
+
+Apresentando na tela o valor recebido "Hello, world".
+
+#### Print Screem:
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/02-Hello-World.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/02-Hello-World.jpg)
 
 #### Print Screem:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)
@@ -249,38 +258,37 @@ Este servidor TCP multithreaded é capaz de aceitar conexões de múltiplos clie
 
 #### Resposta 3:
 
-O código Python implementa um servidor TCP simples que aceita conexões de clientes, recebe mensagens dos clientes, imprime essas mensagens no console e envia de volta para os clientes.
+Código Python define um servidor TCP simples usando a biblioteca socketserver.
 
-##### Analise de cada parte do código de forma didática:
+Análise detalhada:
 
-##### Importação de Módulos:
-- Import socket: Importa o módulo socket para lidar com comunicação em rede.
+- import socket, threading: Importa os módulos socket para a comunicação de rede e threading para a criação de threads.
 
-##### Definição do Endereço e Porta:
-- HOST = "127.0.0.1": Define o endereço IP padrão de loopback (localhost).
-- PORT = 65432: Define a porta na qual o servidor irá escutar por conexões.
+- def handle_server_response(server_socket): Define uma função para lidar com a resposta do servidor. Ela continuamente recebe mensagens do servidor e as imprime na tela.
 
-##### Criação do Socket do Servidor:
-- with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:: Cria um novo socket TCP (socket.SOCK_STREAM) usando o endereço IPv4 (socket.AF_INET). O socket é atribuído à variável s.
+- def connect_to_server(host, port): Define uma função para conectar-se a um servidor. Cria um socket TCP, conecta-se ao servidor especificado e inicia uma thread para lidar com a resposta do servidor.
 
-##### Bind (Associação):
-- s.bind((HOST, PORT)): Associa o socket a um endereço e porta específicos. Neste caso, o endereço é HOST e a porta é PORT.
+- if __name__ == "__main__":: Verifica se o script está sendo executado como programa principal.
 
-##### Listen (Escuta):
-- s.listen(): Coloca o socket em modo de escuta, permitindo que ele aceite conexões entrantes.
+- HOST = "localhost": Define o host como "localhost".
 
-##### Aceitação de Conexões:
-- conn, addr = s.accept(): Aceita uma nova conexão de cliente. O método accept() bloqueia a execução do código até que uma conexão seja estabelecida.
-- conn é um novo socket que representa a conexão com o cliente.
-- addr é uma tupla contendo o endereço IP e o número da porta do cliente.
+- PORTS = [65432, 65433, 65434]: Define uma lista de portas a serem usadas para se conectar a diferentes servidores.
 
-##### Comunicação com o Cliente:
-- with conn:: Define um bloco de código que será executado enquanto a conexão estiver ativa.
-- data = conn.recv(1024): Recebe dados do cliente. O argumento 1024 especifica o número máximo de bytes a serem recebidos de uma vez.
-- print(str(data)): Imprime os dados recebidos do cliente no console.
-- conn.sendall(data): Envia de volta para o cliente os dados recebidos. Neste caso, o - servidor simplesmente ecoa as mensagens de volta para o cliente.
+- servers = []: Inicializa uma lista para armazenar os sockets dos servidores.
 
-Esse código forma a base de um servidor TCP simples que pode ser usado para comunicação em rede
+- for port in PORTS:: Itera sobre as portas na lista PORTS.
+
+- server_socket = connect_to_server(HOST, port): Conecta-se a cada servidor usando a função connect_to_server e adiciona o socket do servidor à lista servers.
+
+- while True:: Entra em um loop infinito para enviar mensagens para os servidores.
+
+- for server_socket in servers:: Itera sobre os sockets dos servidores.
+
+- message = input("Enter message to send: "): Solicita ao usuário uma mensagem para enviar aos servidores.
+
+- server_socket.sendall(message.encode()): Envia a mensagem codificada para o servidor.
+
+Eeste código cria um cliente TCP multi-servidor que se conecta a vários servidores em diferentes portas e permite ao usuário enviar mensagens para todos os servidores conectados. Cada servidor é tratado em uma thread separada para permitir a comunicação simultânea com os servidores.
 
 ### 4) Analise usando o wireshark explicando os pacotes.
 
@@ -325,9 +333,6 @@ Em um servidor TCP, a porta do servidor (neste caso, 65432) permanece a mesma pa
 
 ##### Print Screem 2:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)
-
-
-
 
 Extra:
 
