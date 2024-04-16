@@ -341,6 +341,11 @@ EM DESENVOLVIMENTO!
 
 1) Subir o tcp server na máquina do colega, verificar o IP da máquina (certifique que ele esteja na mesma rede que você)
 
+Subi o server emcasa do Debian 12 Server e executei o Server-TCP-Multicliente.py rodando no IP 192.168.0.15.
+
+##### Print Screem 1:
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)
+
 2) Executar o programa cliente na sua máquina, não esqueça de modificar o IP para a máquina do seu colega.
 
 3) Demonstre com imagens que a conexão teve sucesso.
