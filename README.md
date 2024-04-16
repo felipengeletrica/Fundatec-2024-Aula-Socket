@@ -338,6 +338,25 @@ Em um servidor TCP, a porta do servidor (neste caso, 65432) permanece a mesma pa
 
 ### Conexão com máquina remota do colega:
 
+Exemplo colocando código
+
+```python
+# echo-client.py
+
+import socket
+
+HOST = "127.0.0.1"  # The server's hostname or IP address
+PORT = 65432  # The port used by the server
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.connect((HOST, PORT))
+    s.sendall(b"Hello, world")
+    data = s.recv(1024)
+
+print(f"Received {str(data)}")
+
+```
+
 ### 1) Subir o tcp server na máquina do colega, verificar o IP da máquina (certifique que ele esteja na mesma rede que você)
 
 #### Resposta 1:
@@ -362,30 +381,12 @@ Executei o arquivo Client-TCP-Simple.py na máquina cliente de IP 192.168.0.20 c
 
 ### 4) Usando wireshark mostra conexão filtrando pela portas.
 
-# EM DESENVOLVIMENTO RESPOSTA 4!
+#### Resposta 4:
 
-***
+No envio da mensagem pelo sistema em Python, como demonstrado acima, o sucesso em subir o servidor configurado para receber mensagens do cliente foi um suvcesso e no print screem podemos notar a mensagem desfragmanetada porém "legível para humanos".
 
-Exemplo colocando código
-
-```python
-# echo-client.py
-
-import socket
-
-HOST = "127.0.0.1"  # The server's hostname or IP address
-PORT = 65432  # The port used by the server
-
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.connect((HOST, PORT))
-    s.sendall(b"Hello, world")
-    data = s.recv(1024)
-
-print(f"Received {str(data)}")
-
-```
-
-***
+##### Print Screem Cliente em 192.168.0.20:
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/09-Wireshark-p65432-HelloTeacher.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/09-Wireshark-p65432-HelloTeacher.png)
 
 ## Extra:
 
