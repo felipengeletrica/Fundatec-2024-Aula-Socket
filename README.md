@@ -353,10 +353,10 @@ Executei o arquivo Client-TCP-Simple.py na máquina cliente de IP 192.168.0.20 c
 
 #### Resposta 3:
 
-##### Print Screem Server 192.168.0.15:
+##### Print Screem Server em 192.168.0.15:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/08-Server-TCP-Multicliente-srvblur.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/08-Server-TCP-Multicliente-srvblur.png)
 
-##### Print Screem Server 192.168.0.20:
+##### Print Screem Cliente em 192.168.0.20:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/07-Client-TCP-Simple-blur.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/07-Client-TCP-Simple-blur.png)
 
 4) Usando wireshark mostra conexão filtrando pela portas.
