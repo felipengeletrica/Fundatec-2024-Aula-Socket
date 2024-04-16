@@ -172,7 +172,7 @@ O código implementa um servidor UDP simples em Python usando a biblioteca socke
 
 - Uso do bloco "with": O uso do bloco with garante que o servidor seja corretamente encerrado após a execução do bloco, liberando os recursos associados a ele.
 
-Eeste código implementa um servidor UDP simples que escuta as requisições dos clientes, converte os dados recebidos para maiúsculas e os envia de volta ao cliente. Ele usa a classe socketserver.BaseRequestHandler para lidar com as requisições e a classe socketserver.UDPServer para criar e executar o servidor.
+Este código implementa um servidor UDP simples que escuta as requisições dos clientes, converte os dados recebidos para maiúsculas e os envia de volta ao cliente. Ele usa a classe socketserver.BaseRequestHandler para lidar com as requisições e a classe socketserver.UDPServer para criar e executar o servidor.
 
 ### 4) Analise usando o wireshark explicando os pacotes.
 
