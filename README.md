@@ -335,7 +335,7 @@ Em um servidor TCP, a porta do servidor (neste caso, 65432) permanece a mesma pa
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)
 
 ***
-### Conexão com máquina remota do colega :
+## Conexão com máquina remota do colega :
 
 ### 1) Subir o tcp server na máquina do colega, verificar o IP da máquina (certifique que ele esteja na mesma rede que você)
 
