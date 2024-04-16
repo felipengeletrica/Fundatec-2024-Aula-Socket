@@ -385,6 +385,8 @@ Executei o arquivo Client-TCP-Simple.py na máquina cliente de IP 192.168.0.20 q
 
 No envio da mensagem pelo sistema em Python, como demonstrado acima, o sucesso em subir o servidor configurado para receber mensagens do cliente foi um sucesso e no print screem podemos notar a mensagem desfragmanetada porém "legível para humanos".
 
+Degtalhe da mudança de porta para 53421 na transmissão. :)
+
 ##### Print Screem Cliente em 192.168.0.20:
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/09-Wireshark-p65432-HelloTeacher.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/09-Wireshark-p65432-HelloTeacher.png)
 
