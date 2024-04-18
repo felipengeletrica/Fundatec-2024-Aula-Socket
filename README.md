@@ -1,4 +1,4 @@
-![CapturaSocket](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/128739261/60f1bc32-a6b2-4c81-8dc5-4f845edd3ec3)# Trabalho socket
+# Trabalho socket
 
 Estes sockets fazem parte das aulas de redes de computadores!
 Enjoy meus alunos!
