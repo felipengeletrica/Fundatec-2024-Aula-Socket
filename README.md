@@ -14,9 +14,10 @@ Estes sockets fazem parte das aulas de redes de computadores! Enjoy meus alunos!
     Em seguida o servidor envia uma msg indicando que ele esta escutando a porta, aguardando alguma mensagem direcionada para a porta. Isso é representado pela mensagem na tela de Listen (Escutando).
     
 #####Executar o programa de cliente simple server tcp e verificar os estados da conexão.
-    Ao executar no terminal o cliente é 
+    Ao executar no terminal o cliente TCP ele envia uma msg para o servidor que imprimi na tela as informações pertinentes a conexão tais como o ip do Cliente e a porta de comunicação. Além disso o servidor imprime a mensagem proveniente do cliente e na sequência dá um retorno ao cliente indicando que a mensagem foi ao servidor e retornou ao cliente indicando o sucesso da 'conversa' entre o cliente e o servidor. Por fim o servidor encerra a operação.
     
     Analise o código fonte
+    
     Analise usando o wireshark explicando os pacotes.
     Diferencie a conexão UDP de TCP
 ***
