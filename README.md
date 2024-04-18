@@ -12,3 +12,5 @@ Quando múltiplas conexões estão acontecendo ao mesmo tempo, cada uma precisa 
 ![redes CAPTURA2](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/130008750/71e945b5-f632-4911-a3d2-4e2f7988103d)
 
 ![redes CAPTURA3](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/130008750/f4a6f086-ef8a-4136-98fd-bbf48db4a7de)
+
+![Capturar porta](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/130008750/fd65d857-9697-49e9-8934-3cf7920a0207)
