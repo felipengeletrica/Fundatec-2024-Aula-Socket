@@ -13,13 +13,47 @@ Estes sockets fazem parte das aulas de redes de computadores! Enjoy meus alunos!
     Com o comando python3 Server-TCP-simple.py o programa inicia e lança duas mensagens 1) Bind (Vinculando) indicando a conexão entre um soquet e um endereço. Conforme o codigo em Python o endereço é do loopback 127.0.0.1 e a porta 65432 estas duas informações vão permanecer vinculadas.
     Em seguida o servidor envia uma msg indicando que ele esta escutando a porta, aguardando alguma mensagem direcionada para a porta. Isso é representado pela mensagem na tela de Listen (Escutando).
     
-#####Executar o programa de cliente simple server tcp e verificar os estados da conexão.
+1)Executar o programa de cliente simple server tcp e verificar os estados da conexão.
     Ao executar no terminal o cliente TCP ele envia uma msg para o servidor que imprimi na tela as informações pertinentes a conexão tais como o ip do Cliente e a porta de comunicação. Além disso o servidor imprime a mensagem proveniente do cliente e na sequência dá um retorno ao cliente indicando que a mensagem foi ao servidor e retornou ao cliente indicando o sucesso da 'conversa' entre o cliente e o servidor. Por fim o servidor encerra a operação.
     
-    Analise o código fonte
+2)Analise o código fonte
+    # echo-server.py
+import socket
+HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
+PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
+    # cria um contexto associando o socket com a variável 's' para simplificar a escrita do codigo
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    # socket vincula o host e a port definida nas variáveis
+    s.bind((HOST, PORT))
+    # imprimi msg na tela
+    print("Vinculado")
+    # socket fica auscultando a porta definida pela variável e ip definido
+    s.listen()
+    # imprimi msg na tela
+    print("Escutando")
+    # disponibilidade de aceite de mensagem conforme endereço 
+    conn, addr = s.accept()
+    # imprimi msg na tela
+    print("Conectando")
+
+    with conn:
+        # imprimi msg na tela e o endereço do cliente
+        print(f"Conectado por {addr}")
+        # inicializa um loop
+        while True:
+            # atribui o conteúdo recebido a variável 'data'
+            data = conn.recv(1024)
+            # imprimi msg na tela com o conteudo da variavel 'data'
+            print(str(data))
+            # encerra na medida em que a variável data estiver vazia
+            if not data:
+                break
+            # retorna a mensagem do cliente para o cliente com as letras maíusculas
+            conn.sendall(data.upper())
+
+3)Analise usando o wireshark explicando os pacotes.
     
-    Analise usando o wireshark explicando os pacotes.
-    Diferencie a conexão UDP de TCP
+4)Diferencie a conexão UDP de TCP
 ***
 ##Simple server UDP :
 
