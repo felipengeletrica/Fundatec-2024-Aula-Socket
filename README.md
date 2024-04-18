@@ -66,6 +66,11 @@ A porta de origem do cliente também pode variar, mas isso é gerenciado pelo pr
 
 ![Captura de Tela (19)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/a4ebfa34-8ed5-4d91-bfa3-c6298af8a831)
 
+***
+
+### WireShark
+![Captura de Tela (20)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/5bf95972-52ff-49bd-b734-dd3a744a0711)
+
 
 
 
