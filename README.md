@@ -9,7 +9,8 @@
 ### Simple server TCP:
 
 
-![Screenshot (45)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/8d39b33a-087b-464e-a502-885dcc4fc95b)
+
+![Screenshot (46)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/e743c957-e7b7-432a-9006-9fb2f0d95878)
 
 
 
@@ -35,3 +36,7 @@ O TCP cria uma linha de comunicação segura para garantir a transmissão confi�
 O UDP não estabelece uma conexão ao enviar dados. Ele envia os dados sem confirmação de recebimento ou verificação de erros. Isso significa que alguns ou todos os dados podem ser perdidos durante a transmissão.
 
 A principal diferença entre TCP (protocolo de controle de transmissão) e UDP (protocolo de datagramas do usuário) é que TCP é um protocolo baseado em conexão e UDP é sem conexão. Enquanto o TCP é mais confiável, ele transfere dados mais lentamente. O UDP é menos confiável, mas funciona mais rapidamente.
+
+***
+
+### Simple server UDP :
