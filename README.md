@@ -1,4 +1,4 @@
-- Simple server TCP - 
+- Simple server TCP  
 
 Diferencie a conexão UDP de TCP: 
 
@@ -6,7 +6,7 @@ TCP: É uma conexão orientada a conexões, o que significa que é altamente con
 
 UDP: É uma conexão não orientada a conexões e não confiável. Ele não garante a entrega dos dados nem a ordem em que são entregues. Os pacotes podem ser perdidos, duplicados ou entregues fora de ordem.
 
-- Multiserver TCP - 
+- Multiserver TCP 
 
 Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark:
 
