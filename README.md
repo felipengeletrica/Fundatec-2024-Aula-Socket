@@ -52,7 +52,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             conn.sendall(data.upper())
 
 3)Analise usando o wireshark explicando os pacotes.
-    
+    As informações 
+
 4)Diferencie a conexão UDP de TCP
 ***
 ##Simple server UDP :
