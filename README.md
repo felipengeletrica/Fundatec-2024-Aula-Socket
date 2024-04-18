@@ -28,5 +28,7 @@ Cada pacote UDP é independente e não possui um estado associado. Portanto, nã
 
 ![xd](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/130003783/86abcc0e-3a39-48c0-9745-81f2e56b08d6)
 
+![w1](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/130003783/edabe01c-fe7d-4a05-bec6-33c39fa705bd)
+
 
 
