@@ -31,3 +31,7 @@ Conexões Concorrentes: O servidor pode lidar com várias conexões simultaneame
 ![aaa](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/96994154/f4bd4b43-d9cc-4431-9649-bf6a29506b07)
 
 ![bbbb](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/96994154/d2fa6611-0639-4b62-863d-ff5036a9caab)
+
+![wire](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/96994154/636fdf43-316e-4c1e-91b5-abf91737502d)
+
+
