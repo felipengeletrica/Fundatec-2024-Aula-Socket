@@ -61,4 +61,11 @@ Quando um servidor TCP aceita uma nova conexão de um cliente, uma nova porta é
 A combinação de endereço IP do servidor e porta de destino única para cada conexão garante que os pacotes de dados sejam roteados corretamente entre o cliente e o servidor, mesmo quando há várias conexões simultâneas.
 A porta de origem do cliente também pode variar, mas isso é gerenciado pelo próprio cliente e não afeta diretamente o servidor. Cada conexão do cliente será representada por uma combinação única de endereço IP e porta de origem.
 
+***
+### Conexão com máquina remota com o Vitor Alicer:
+
+![Captura de Tela (19)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/a4ebfa34-8ed5-4d91-bfa3-c6298af8a831)
+
+
+
 
