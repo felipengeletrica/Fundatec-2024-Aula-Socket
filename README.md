@@ -19,5 +19,5 @@ Suporta multicasting e broadcasting.
 3.Quando um servidor recebe várias conexões, cada uma dessas conexões é identificada por uma combinação única de endereço IP e número de porta. A porta é usada para distinguir entre diferentes conexões de rede no mesmo computador.
 
 ![Captura de Tela (1)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/130003743/16308d35-1d7f-4d68-b93e-ebd4d250aec9)
-![Captura de Tela (2)](https://github.com/felipengeletrica/Fundatec-2![Captura de Tela (3)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/130003743/d763de15-e145-4d52-9326-a4165a9dadec)
-024-Aula-Socket/assets/130003743/3bfbb2cb-d3bb-4206-a8ad-1ed509a21920)
+![Captura de Tela (2)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/130003743/2a7706f8-f9d4-4864-994e-aea5f61c9ed9)
+![Captura de Tela (3)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/130003743/f13c2335-39eb-4349-b061-5fb49a83b8a5)
