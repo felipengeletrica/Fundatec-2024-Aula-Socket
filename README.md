@@ -56,7 +56,7 @@ A principal diferença entre TCP (protocolo de controle de transmissão) e UDP (
 Em um servidor que suporta múltiplas conexões, o servidor é capaz de atender a solicitações de vários clientes simultaneamente. Isso é importante em muitos casos, especialmente em ambientes de rede onde há múltiplos clientes que precisam interagir com o servidor ao mesmo tempo.
 No contexto de um servidor TCP, cada nova conexão é tratada separadamente por uma nova instância do manipulador de solicitações, permitindo que o servidor atenda a várias conexões ao mesmo tempo.
 
-#### Porta "Muda" a Cada Conexão:
+#### Porta "muda" a Cada Conexão:
 Quando um servidor TCP aceita uma nova conexão de um cliente, uma nova porta é atribuída para essa conexão específica. Isso acontece para permitir que o servidor diferencie entre várias conexões ativas.
 A combinação de endereço IP do servidor e porta de destino única para cada conexão garante que os pacotes de dados sejam roteados corretamente entre o cliente e o servidor, mesmo quando há várias conexões simultâneas.
 A porta de origem do cliente também pode variar, mas isso é gerenciado pelo próprio cliente e não afeta diretamente o servidor. Cada conexão do cliente será representada por uma combinação única de endereço IP e porta de origem.
