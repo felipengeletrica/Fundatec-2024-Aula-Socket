@@ -40,3 +40,25 @@ A principal diferença entre TCP (protocolo de controle de transmissão) e UDP (
 ***
 
 ### Simple server UDP :
+
+![Screenshot (47)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/df872649-cfca-47dc-8d90-e5254d958166)
+
+
+***
+
+### Multiserver TCP:
+
+![Screenshot (48)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/61fd9236-bca1-488a-b7a9-899cef02f4d8)
+
+### 1. Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark
+
+#### Multiplas Conexões:
+Em um servidor que suporta múltiplas conexões, o servidor é capaz de atender a solicitações de vários clientes simultaneamente. Isso é importante em muitos casos, especialmente em ambientes de rede onde há múltiplos clientes que precisam interagir com o servidor ao mesmo tempo.
+No contexto de um servidor TCP, cada nova conexão é tratada separadamente por uma nova instância do manipulador de solicitações, permitindo que o servidor atenda a várias conexões ao mesmo tempo.
+
+#### Porta "Muda" a Cada Conexão:
+Quando um servidor TCP aceita uma nova conexão de um cliente, uma nova porta é atribuída para essa conexão específica. Isso acontece para permitir que o servidor diferencie entre várias conexões ativas.
+A combinação de endereço IP do servidor e porta de destino única para cada conexão garante que os pacotes de dados sejam roteados corretamente entre o cliente e o servidor, mesmo quando há várias conexões simultâneas.
+A porta de origem do cliente também pode variar, mas isso é gerenciado pelo próprio cliente e não afeta diretamente o servidor. Cada conexão do cliente será representada por uma combinação única de endereço IP e porta de origem.
+
+
