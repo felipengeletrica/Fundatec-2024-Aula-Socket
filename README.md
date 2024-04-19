@@ -27,7 +27,7 @@ Listen: O servidor fica pronto para receber conexões entrantes, anunciando a di
 Com isso, o servidor está pronto para estabelecer conexões ativas, enviar e receber dados através delas.
 
 #### Print Screem:
-[![Start PY Server](Trabalho_Artur/01-Start-PY-Server.jpg)]
+![Start PY Server](Trabalho_Artur/01-Start-PY-Server.jpg)
 
 ### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
 
