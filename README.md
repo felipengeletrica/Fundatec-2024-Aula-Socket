@@ -57,16 +57,51 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 4)Diferencie a conexão UDP de TCP
 ***
 ##Simple server UDP :
+Simple server UDP :
 
-#####Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
-#####Executar o programa de cliente simple server tcp e verificar os estados da conexão.
-#####Analise o código fonte
-#####Analise usando o wireshark explicando os pacotes.
+    1)Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
+
+    2)Executar o programa de cliente simple server tcp e verificar os estados da conexão.
+
+    3)Analise o código fonte
+
+    4)Analise usando o wireshark explicando os pacotes.
+
+
 ***
 ##Multiserver TCP :
-#####Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
-#####Executar o programa de cliente simple server tcp e verificar os estados da conexão.
-#####Analise o código fonte
-#####Analise usando o wireshark explicando os pacotes.
-#####Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark
+
+
+    1)Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
+
+    2)Executar o programa de cliente simple server tcp e verificar os estados da conexão.
+
+    3)Analise o código fonte
+
+    4)Analise usando o wireshark explicando os pacotes.
+
+    5)Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark
+
+##Conexão com máquina remota do colega :
+
+    1)Subir o tcp server na máquina do colega, verificar o IP da máquina (certifique que ele esteja na mesma rede que você)
+
+    2)Executar o programa cliente na sua máquina, não esqueça de modificar o IP para a máquina do seu colega.
+
+    3)Demonstre com imagens que a conexão teve sucesso.
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_1.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_1.png)
+
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_2.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_2.png)
+
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_3.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_3.png)
+
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_4.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_4.png)
+
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_5.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_5.png)
+
+[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_6.jpeg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_6.jpeg)
+
+
+    4)Usando wireshark mostra conexão filtrando pela portas.
+
 
