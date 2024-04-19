@@ -347,7 +347,7 @@ Este código cria um servidor TCP que recebe mensagens de clientes, converte as 
 ### Conexão com máquina remota do colega :
 
 1) Subir o tcp server na máquina do colega, verificar o IP da máquina (certifique que ele esteja na mesma rede que você)
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/01ServerTCP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/01ServerTCP.jpg)
+![Server 1](imagens/01ServerTCP.jpg)
 
 2) Executar o programa cliente na sua máquina, não esqueça de modificar o IP para a máquina do seu colega.
 
@@ -355,7 +355,6 @@ Este código cria um servidor TCP que recebe mensagens de clientes, converte as 
 
 4) Usando wireshark mostra conexão filtrando pela portas.
 
-***
 Exemplo colocando código
 
 ```python
