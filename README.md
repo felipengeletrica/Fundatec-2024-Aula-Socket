@@ -22,16 +22,15 @@ Conexões Concorrentes: O servidor pode lidar com várias conexões simultaneame
 
 à mudança de porta a cada conexão, geralmente não ocorre em servidores típicos. O número da porta é usado para identificar o serviço, e enquanto ele geralmente permanece o mesmo, cada conexão terá seu próprio endereço de soquete único, composto pelo endereço IP e número da porta.
 
-![Capturar](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/96994154/d8b7685c-9d79-46ae-b455-3d4031f26cef)
-
-![udp](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/96994154/60ece388-fbbd-456a-a204-7d756822a30f)
-
-![multi](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/96994154/1911c004-961c-40e4-89d0-336c07af6b6d)
-
-![aaa](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/96994154/f4bd4b43-d9cc-4431-9649-bf6a29506b07)
-
-![bbbb](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/96994154/d2fa6611-0639-4b62-863d-ff5036a9caab)
-
-![wire](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/96994154/636fdf43-316e-4c1e-91b5-abf91737502d)
+![Capturar](imagens/Capturar.PNG)
 
 
+![udp](/imagens/udp.PNG)
+
+![multi](/imagens/multi.PNG)
+
+![aaa](/imagens/aaa.PNG)
+
+![bbbb](/imagens/bbbb.PNG)
+
+![wire](/imagens/wire.PNG)
