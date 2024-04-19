@@ -44,7 +44,7 @@ Uma chamada SOCKET bem-sucedida retorna um descritor de arquivo comum que será 
 Apresentando na tela o valor recebido "Hello, world".
 
 #### Print Screem:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/02-Hello-World.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/02-Hello-World.jpg)
+![Hello World](Trabalho_Artur/02-Hello-World.jpg)
 
 ### 3) Analise o código fonte
 
@@ -100,7 +100,7 @@ Ambos estão configurados para se comunicar através do endereço IP 127.0.0.1 (
 Essa sequência de pacotes é observada no Wireshark e representa a troca de mensagens entre o servidor e o cliente durante a comunicação TCP. Cada pacote tem um papel específico na estabelecimento, transmissão e encerramento da conexão TCP entre os dois.
 
 #### Print Screem:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/06-Analise-Pacotes.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/06-Analise-Pacotes.jpg)
+![06-Analise-Pacotes](Trabalho_Artur/06-Analise-Pacotes.jpg)
 
 ### 5) Diferencie a conexão UDP de TCP
 
@@ -205,7 +205,7 @@ Ambos estão configurados para se comunicar através do endereço IP 127.0.0.1 (
 Essa sequência de pacotes é observada no Wireshark e representa a troca de mensagens entre o servidor e o cliente durante a comunicação TCP. Cada pacote tem um papel específico na estabelecimento, transmissão e encerramento da conexão TCP entre os dois.
 
 #### Print Screem:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/06-Analise-Pacotes.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/06-Analise-Pacotes.jpg)
+![Analise Pacotes](Trabalho_Artur/06-Analise-Pacotes.jpg)
 
 
 ***
@@ -249,10 +249,10 @@ Uma chamada SOCKET bem-sucedida retorna um descritor de arquivo comum que será 
 Apresentando na tela o valor recebido "Hello, world".
 
 #### Print Screem:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/02-Hello-World.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/02-Hello-World.jpg)
+![Hello World](Trabalho_Artur/02-Hello-World.jpg)
 
 #### Print Screem:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP.jpg)
+![Mensage UDP](Trabalho_Artur/05-Mensage-UDP.jpg)
 
 ### 3) Analise o código fonte
 
@@ -321,7 +321,7 @@ Ambos estão configurados para se comunicar através do endereço IP 127.0.0.1 (
 Essa sequência de pacotes é observada no Wireshark e representa a troca de mensagens entre o servidor e o cliente durante a comunicação TCP. Cada pacote tem um papel específico na estabelecimento, transmissão e encerramento da conexão TCP entre os dois.
 
 #### Print Screem:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/06-Analise-Pacotes.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/06-Analise-Pacotes.jpg)
+![Analise Pacotes](Trabalho_Artur/06-Analise-Pacotes.jpg)
 
 ### 5) Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark
 
@@ -329,10 +329,10 @@ Essa sequência de pacotes é observada no Wireshark e representa a troca de men
 Em um servidor TCP, a porta do servidor (neste caso, 65432) permanece a mesma para todas as conexões. A porta de origem do cliente é que muda a cada nova conexão. Isso ocorre porque cada conexão TCP é identificada por um conjunto único de endereço IP e porta de origem e destino. O servidor mantém a mesma porta para ouvir por novas conexões, enquanto as portas de origem dos clientes variam para distinguir entre as diferentes conexões.
 
 ##### Print Screem 1:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-2.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-2.jpg)
+![Mensage UDP](Trabalho_Artur/05-Mensage-UDP-2.jpg)
 
 ##### Print Screem 2:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)
+![Mensage-UDP-Wireshark](Trabalho_Artur/05-Mensage-UDP-Wireshark.jpg)
 
 ***
 
@@ -374,10 +374,10 @@ Executei o arquivo Client-TCP-Simple.py na máquina cliente de IP 192.168.0.20 q
 #### Resposta 3:
 
 ##### Print Screem Server em 192.168.0.15:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/08-Server-TCP-Multicliente-srvblur.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/08-Server-TCP-Multicliente-srvblur.png)
+[![Server TCP Multicliente srvblur](Trabalho_Artur/08-Server-TCP-Multicliente-srvblur.png)
 
 ##### Print Screem Cliente em 192.168.0.20:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/07-Client-TCP-Simple-blur.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/07-Client-TCP-Simple-blur.png)
+![Client TCP Simple blur](Trabalho_Artur/07-Client-TCP-Simple-blur.png)
 
 ### 4) Usando wireshark mostra conexão filtrando pela portas.
 
@@ -388,7 +388,7 @@ No envio da mensagem pelo sistema em Python, como demonstrado acima, o sucesso e
 Detalhe da mudança de porta para 53421 na transmissão. :)
 
 ##### Print Screem Cliente em 192.168.0.20:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/09-Wireshark-p65432-HelloTeacher.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/09-Wireshark-p65432-HelloTeacher.png)
+![Wireshark-p65432-HelloTeacher](Trabalho_Artur/09-Wireshark-p65432-HelloTeacher.png)
 
 ## Extra:
 
@@ -399,14 +399,14 @@ Executando o comando "netstat -an | grep "65432" lista todas as conexões de red
 O comando completo retorna informações sobre as conexões de rede que estão utilizando a porta "65432" no sistema.
 
 #### Print Screem:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03-Netstat_Grep.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03-Netstat_Grep.jpg)
+![Netstat_Grep](Trabalho_Artur/03-Netstat_Grep.jpg)
 
 #### Extra 3: nmap:
 
 O comando "nmap -p65432 localhost" executa uma varredura de portas na máquina local (localhost) para verificar se a porta 65432 está aberta. O nmap é uma ferramenta de segurança e auditoria de rede que mostra quais portas estão abertas em um sistema, ajudando a identificar possíveis vulnerabilidades.
 
 #### Print Screem:
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/03.1-Nmap.jpg)
+![Nmap](Trabalho_Artur/03.1-Nmap.jpg)
 
 The end!
 
@@ -416,9 +416,7 @@ Thank you, teacher! 😎
 
 #### Bônus! :P
 
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/artur-e-gustavo.jpg)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Artur/Trabalho_Artur/artur-e-gustavo.jpg)
-
-teste
+![Atur e gustavo](Trabalho_Artur/artur-e-gustavo.jpg)
 
 
 
