@@ -89,7 +89,7 @@ Simple server UDP :
     2)Executar o programa cliente na sua máquina, não esqueça de modificar o IP para a máquina do seu colega.
 
     3)Demonstre com imagens que a conexão teve sucesso.
-[![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_1.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_1.png)
+[![Print Screm](Documentations/Print_1.png)](Documentations/Print_1.png)
 
 [![Print Screm](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_2.png)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Gustavo/Documentations/Print_2.png)
 
