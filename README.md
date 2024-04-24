@@ -19,7 +19,7 @@ Documente com print e coloque aqui as respostas
 
 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
 
-## Estados de conexão
+### Estados de conexão
 
 SYN_SENT: o cliente envia uma solicitação de conexão (SYN) para o servidor. 
 
@@ -27,8 +27,8 @@ SYN_RECEIVED: o servidor recebe a solicitação de conexão SYN e responde com s
 ESTABLISHED: o cliente recebe a resposta SYN, ACK do servidor e envia um ACK de confirmação. A conexão é estabelecida.   
 
 Escuta e Aceitação de Conexões:
-LISTENING: o servidor está esperando por conexões de entrada.
-ESTABLISHED: quando uma conexão é aceita pelo servidor, ela entra no estado ESTABLISH.
+LISTENING: o servidor está esperando por conexões de entrada.  
+ESTABLISHED: quando uma conexão é aceita pelo servidor, ela entra no estado ESTABLISH.  
 ***
 ## Métodos utilizados:
 socket.socket(): Cria um objeto socket. AF_INET indica que estamos usando a família de endereços IPv4 e SOCK_STREAM indica que estamos usando TCP.
