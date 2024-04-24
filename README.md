@@ -40,9 +40,11 @@ accept(): Aceita uma conexão pendente. Retorna um novo socket (client_socket) e
 send(): Envie dados ao cliente conectado. Aqui, estamos enviando uma mensagem de confirmação ao cliente.  
 close(): Fecha o socket.  
 
+![Listen,Bind](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/Server-TCP-SimplesEstadosCconex%C3%A3o.png?raw=true)
+
 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
-Bind
-Listen
+
+
 
 3) Analise o código fonte
 Importando o Módulo socketserver:
