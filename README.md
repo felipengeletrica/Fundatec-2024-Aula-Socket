@@ -26,17 +26,19 @@ SYN_RECEIVED: o servidor recebe a solicitação de conexão SYN e responde com s
 ESTABLISHED: o cliente recebe a resposta SYN, ACK do servidor e envia um ACK de confirmação. A conexão é estabelecida.     
 
 Escuta e Aceitação de Conexões:  
+
 LISTENING: o servidor está esperando por conexões de entrada.      
 ESTABLISHED: quando uma conexão é aceita pelo servidor, ela entra no estado ESTABLISH.   
 
 ***
-## Métodos utilizados:
-socket.socket(): Cria um objeto socket. AF_INET indica que estamos usando a família de endereços IPv4 e SOCK_STREAM indica que estamos usando TCP.
-bind(): Liga o socket ao endereço (host) e porta especificados. Isso associa o servidor a uma interface de rede e a uma porta no host.
-listen(): Coloca o socket no modo de escuta, permitindo que aceite conexões de clientes. O argumento especifica o número máximo de conexões pendentes que podem ser enfileiradas para processamento.
-accept(): Aceita uma conexão pendente. Retorna um novo socket (client_socket) e o endereço do cliente (addr), que podem ser usados para enviar e receber dados do cliente.
-send(): Envie dados ao cliente conectado. Aqui, estamos enviando uma mensagem de confirmação ao cliente.
-close(): Fecha o socket.
+### Métodos utilizados:
+
+socket.socket(): Cria um objeto socket. AF_INET indica que estamos usando a família de endereços IPv4 e SOCK_STREAM indica que estamos usando TCP.  
+bind(): Liga o socket ao endereço (host) e porta especificados. Isso associa o servidor a uma interface de rede e a uma porta no host.  
+listen(): Coloca o socket no modo de escuta, permitindo que aceite conexões de clientes. O argumento especifica o número máximo de conexões pendentes que podem ser enfileiradas para processamento.  
+accept(): Aceita uma conexão pendente. Retorna um novo socket (client_socket) e o endereço do cliente (addr), que podem ser usados para enviar e receber dados do cliente.  
+send(): Envie dados ao cliente conectado. Aqui, estamos enviando uma mensagem de confirmação ao cliente.  
+close(): Fecha o socket.  
 
 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
 Bind
