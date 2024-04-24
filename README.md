@@ -19,11 +19,12 @@ Documente com print e coloque aqui as respostas
 
 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
 
-## EStados de conexão
+## Estados de conexão
 
 SYN_SENT: o cliente envia uma solicitação de conexão (SYN) para o servidor. 
-SYN_RECEIVED: o servidor recebe a solicitação de conexão SYN e responde com sua própria solicitação de conexão SYN, ACK (acknowledgment). 
-ESTABLISHED: o cliente recebe a resposta SYN, ACK do servidor e envia um ACK de confirmação. A conexão é estabelecida. 
+
+SYN_RECEIVED: o servidor recebe a solicitação de conexão SYN e responde com sua própria solicitação de conexão SYN, ACK (acknowledgment).   
+ESTABLISHED: o cliente recebe a resposta SYN, ACK do servidor e envia um ACK de confirmação. A conexão é estabelecida.   
 
 Escuta e Aceitação de Conexões:
 LISTENING: o servidor está esperando por conexões de entrada.
