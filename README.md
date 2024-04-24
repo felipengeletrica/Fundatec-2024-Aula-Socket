@@ -19,56 +19,23 @@ Documente com print e coloque aqui as respostas
 
 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
 
-Este código Python é um servidor TCP simples que ecoa de volta qualquer mensagem que recebe do cliente.
-Importando o Módulo Socket:
-python
-Copy code
-import socket
-Aqui, estamos importando o módulo socket, que fornece as funcionalidades necessárias para criar e gerenciar sockets em Python.
-Definindo o Endereço e Porta do Servidor:
-python
-Copy code
-HOST = "10.0.1.131"  # Endereço do host
-PORT = 65432  # Porta para escutar
-Estamos definindo o endereço IP do host como 10.0.1.131 e a porta como 65432. O servidor irá escutar por conexões nesta porta.
-Criando um Socket:
-python
-Copy code
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-Estamos criando um socket TCP IPv4 usando socket.AF_INET e socket.SOCK_STREAM. O uso do gerenciador de contexto with garante que o socket seja fechado corretamente após o uso.
-Fazendo o Bind:
-python
-Copy code
-s.bind((HOST, PORT))
-Aqui, estamos associando o socket ao endereço e porta especificados. O servidor estará disponível neste endereço e porta para receber conexões de entrada.
-Colocando em Modo de Escuta (Listen):
-python
-Copy code
-s.listen()
-Esta função coloca o socket em modo de escuta, permitindo que aceite conexões de entrada. O servidor está agora esperando por conexões de clientes.
-Aceitando Conexões de Entrada:
-python
-Copy code
-conn, addr = s.accept()
-Quando uma conexão de entrada é recebida, a função accept() é chamada, que aceita a conexão e retorna um novo socket conn dedicado à comunicação com o cliente, e o endereço addr do cliente.
-Comunicando com o Cliente:
-python
-Copy code
-with conn:
-    while True:
-        data = conn.recv(1024)
-        if not data:
-            break
-        conn.sendall(data)
-Neste trecho, estamos recebendo dados do cliente através do socket conn, ecoando de volta esses dados para o cliente e repetindo esse processo enquanto houver dados a serem recebidos.
-Fechando a Conexão:
-O uso do gerenciador de contexto with garante que o socket conn seja fechado automaticamente após a comunicação ser concluída.
-Este servidor TCP simples passa pelos seguintes estados:
-
-Bind: Associa o socket a um endereço e porta.
-Listen: Coloca o socket em modo de escuta, esperando por conexões de entrada.
-Accept: Aceita uma conexão de entrada e cria um novo socket dedicado para comunicação com o cliente.
-Connected: Indica que uma conexão foi estabelecida com sucesso entre o servidor e o cliente.
+##Estados de Conexão (Three-way Handshake):##
+***
+SYN_SENT: O cliente envia uma solicitação de conexão (SYN) para o servidor.
+SYN_RECEIVED: O servidor recebe a solicitação de conexão SYN e responde com sua própria solicitação de conexão SYN, ACK (acknowledgment).
+ESTABLISHED: O cliente recebe a resposta SYN, ACK do servidor e envia um ACK de confirmação. A conexão é estabelecida.
+---
+Escuta e Aceitação de Conexões:
+LISTENING: O servidor está esperando por conexões de entrada.
+ESTABLISHED: Quando uma conexão é aceita pelo servidor, ela entra no estado ESTABLISHED.
+---
+##Métodos utilizados:##
+socket.socket(): Cria um objeto socket. AF_INET indica que estamos usando a família de endereços IPv4 e SOCK_STREAM indica que estamos usando TCP.
+bind(): Liga o socket ao endereço (host) e porta especificados. Isso associa o servidor a uma interface de rede e a uma porta no host.
+listen(): Coloca o socket no modo de escuta, permitindo que aceite conexões de clientes. O argumento especifica o número máximo de conexões pendentes que podem ser enfileiradas para processamento.
+accept(): Aceita uma conexão pendente. Retorna um novo socket (client_socket) e o endereço do cliente (addr), que podem ser usados para enviar e receber dados do cliente.
+send(): Envie dados ao cliente conectado. Aqui, estamos enviando uma mensagem de confirmação ao cliente.
+close(): Fecha o socket.
 
 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
 Bind
