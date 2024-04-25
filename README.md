@@ -11,22 +11,20 @@ Documente com print e coloque aqui as respostas
 
 ### Simple server TCP :
 
+### 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc:
+   
+### bind:
+Quando um servidor cria um socket TCP, ele fica inicialmente em um estado não vinculado, o que significa que não está associado a um endereço IP e porta específica. Para disponibilizar o socket para conexões de entrada, o servidor precisa se vincular a um endereço IP e a alguma porta usando a bind().
 
-### 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
+### listen:
+Depois de vincular o socket, o servidor precisa colocar em um estado de escuta usando a listen(). Isso indica que o servidor está pronto para aceitar conexões de entrada de clientes.
+Quando o listen() é chamado, o sistema operacional configura uma fila para armazenar solicitações de conexão recebidas. O parâmetro backlog especifica o número máximo de conexões pendentes que podem ser enfileiradas antes que novas conexões sejam recusadas.
 
-#### Resposta 1:
+Resumindo, o bind() associa um socket a um endereço IP e a uma porta, enquanto listen() coloca o socket em estado de escuta, permitindo que o servidor aceite conexões de entrada de clientes.
 
-1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc: 
-O socket é criado usando socket.socket(socket.AF_INET, socket.SOCK_STREAM), configurado para IPv4 e TCP. O método s.bind((HOST, PORT)) associa o socket ao endereço localhost (127.0.0.1) e à porta 65432. Essa etapa define onde o servidor vai escutar por conexões.
-Após o bind, o socket entra em modo de escuta com s.listen(). Isso prepara o servidor para aceitar conexões de entrada. O método s.accept() é usado para aceitar uma conexão. Ele bloqueia a execução do programa até que um cliente se conecte. Quando um cliente se conecta, ele retorna um novo socket "conn" para interagir com o cliente e o endereço "addr" do cliente.
-Uma vez estabelecida a conexão, o servidor entra em um loop infinito onde recebe dados do cliente com conn.recv(1024) e imediatamente os envia de volta com conn.sendall(data). O loop termina quando não há mais dados para receber, ou seja, data é vazio. O socket de conexão "conn" é automaticamente fechado ao sair do bloco with. O socket principal "s" também é fechado ao sair do seu respectivo bloco with.
-
-#### Print Screem:
 ![Start PY Server](Trabalho_Gabrielle/01.jpg)
 
 ### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
-
-#### Resposta 2:
 
 
 mfndklfndlf
