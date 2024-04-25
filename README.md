@@ -2,8 +2,6 @@
 >
 >Estes sockets fazem parte das aulas de redes de computadores!
 
-<span style="color:#0969DA">#Trabalho socket</span>
-
    #  Trabalho socket                                    
 
 ## Simple server TCP :
