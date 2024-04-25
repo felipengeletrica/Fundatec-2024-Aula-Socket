@@ -34,63 +34,59 @@ ESTABLISHED: quando uma conexão é aceita pelo servidor, ela entra no estado ES
 ### Métodos utilizados:
 
 socket.socket(): Cria um objeto socket. AF_INET indica que estamos usando a família de endereços IPv4 e SOCK_STREAM indica que estamos usando TCP.  
-bind(): Liga o socket ao endereço (host) e porta especificados. Isso associa o servidor a uma interface de rede e a uma porta no host.  
-listen(): Coloca o socket no modo de escuta, permitindo que aceite conexões de clientes. O argumento especifica o número máximo de conexões pendentes que podem ser enfileiradas para processamento.  
-accept(): Aceita uma conexão pendente. Retorna um novo socket (client_socket) e o endereço do cliente (addr), que podem ser usados para enviar e receber dados do cliente.  
-send(): Envie dados ao cliente conectado. Aqui, estamos enviando uma mensagem de confirmação ao cliente.  
-close(): Fecha o socket.  
+bind(): Liga o socket ao endereço (host) e porta especificados. Isso associa o servidor a uma interface de rede e a uma porta no host.    
+listen(): Coloca o socket no modo de escuta, permitindo que aceite conexões de clientes. O argumento especifica o número máximo de  conexões pendentes que podem ser enfileiradas para processamento.      
+accept(): Aceita uma conexão pendente. Retorna um novo socket (client_socket) e o endereço do cliente (addr), que podem ser usados para  enviar e receber dados do cliente.    
+send(): Envie dados ao cliente conectado. Aqui, estamos enviando uma mensagem de confirmação ao cliente.    
+close(): Fecha o socket.    
 
 ![Listen,Bind](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/Server-TCP-SimplesEstadosCconex%C3%A3o.png?raw=true)
 
 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
 
+ Executado o "localhost" (192.168.0.21) na porta "65432", envia uma mensagem de teste ("Hello, world!").  
+ Apresentando a frase "Hello, world" na tela.  
 
+![Estado conexão](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/clientconexaoserver.png?raw=true)
 
 3) Analise o código fonte
-Importando o Módulo socketserver:
-python
-Copy code
-import socketserver
-Aqui, estamos importando o módulo socketserver, que nos permite criar facilmente servidores de socket em Python.
-Definindo a Classe MyUDPHandler:
-python
-Copy code
-class MyUDPHandler(socketserver.BaseRequestHandler):
-Esta classe é uma subclasse de socketserver.BaseRequestHandler e serve para manipular as solicitações recebidas pelo servidor UDP.
-Docstring da Classe:
-python
-Copy code
-"""
-This class works similar to the TCP handler class, except that
-self.request consists of a pair of data and client socket, and since
-there is no connection the client address must be given explicitly
-when sending data back via sendto().
-"""
-Aqui, temos uma docstring que descreve a funcionalidade da classe. Ela explica que a classe é semelhante à classe de manipulador TCP, mas trabalha com UDP. Também destaca que, como não há conexão estabelecida, o endereço do cliente deve ser explicitamente fornecido ao enviar dados de volta.
-Método handle():
-python
-Copy code
-def handle(self):
-    data = self.request[0].strip()
-    socket = self.request[1]
-    print("{} wrote:".format(self.client_address[0]))
-    print(data)
-    socket.sendto(data.upper(), self.client_address)
-O método handle() é chamado quando uma nova solicitação é recebida pelo servidor UDP. Ele processa a solicitação e envia uma resposta ao cliente. Aqui está o que está acontecendo dentro do método:
-data = self.request[0].strip(): Extrai os dados recebidos do cliente, removendo quaisquer espaços em branco no início e no final.
-socket = self.request[1]: Extrai o socket associado à solicitação do cliente.
-print("{} wrote:".format(self.client_address[0])): Imprime o endereço IP do cliente que enviou os dados.
-print(data): Imprime os dados recebidos do cliente.
-socket.sendto(data.upper(), self.client_address): Converte os dados recebidos para maiúsculas e os envia de volta para o cliente usando socket.sendto(), fornecendo o endereço do cliente explicitamente.
-Bloco de Execução Principal:
-python
-Copy code
-if __name__ == "__main__":
-    HOST, PORT = "localhost", 65431
-    with socketserver.UDPServer((HOST, PORT), MyUDPHandler) as server:
-        server.serve_forever()
-Neste bloco, estamos inicializando o servidor UDP. O servidor é configurado para escutar em localhost (127.0.0.1) na porta 65431. Em seguida, entramos em um loop infinito para que o servidor esteja sempre pronto para receber e processar solicitações de clientes.
-Resumindo, este código implementa um servidor UDP simples em Python que recebe mensagens de clientes, converte as mensagens para maiúsculas e as envia de volta para os clientes. Ele usa a classe socketserver.BaseRequestHandler para definir o comportamento do servidor ao lidar com solicitações de clientes UDP.
+
+### Importação do Módulo `socket`:
+O primeiro passo é importar o módulo `socket`, que fornece suporte para sockets no Python.
+
+```python
+import socket  
+
+Criação do Socket do Servidor:
+Em seguida, criamos um objeto de socket usando socket.socket(). Aqui, especificamos socket.AF_INET para indicar que estamos usando a família de endereços IPv4 e socket.SOCK_STREAM para indicar que estamos usando TCP.    
+ **server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)**
+
+Definição do Host e Porta:
+A seguir, obtemos o nome da máquina local usando socket.gethostname() e definimos a porta em que o servidor estará escutando conexões.  
+ **host = socket.gethostname()port = 12345**  
+
+Vinculação do Socket:  
+Usamos o método bind() para vincular o socket ao host e à porta especificados. Isso associa o servidor a uma interface de rede e a uma porta no host.
+
+ **server_socket.bind((host, port))**  
+
+Modo de Escuta:  
+Em seguida, usamos o método listen() para colocar o socket no modo de escuta. O argumento passado indica o número máximo de conexões pendentes que podem ser enfileiradas para processamento.  
+ **server_socket.listen(5)**
+
+Aceitação de Conexões:  
+Entramos em um loop while True para esperar por conexões de clientes. Dentro do loop, usamos o método accept() para aceitar uma conexão pendente. Isso retorna um novo socket (client_socket) que representa a conexão com o cliente e o endereço do cliente (addr).
+**while True:
+    client_socket, addr = server_socket.accept()**  
+
+Envio de Mensagem ao Cliente:  
+Dentro do loop, após aceitar uma conexão, enviamos uma mensagem de confirmação ao cliente usando o método send(). Aqui, a mensagem é codificada em UTF-8 antes de ser enviada.  
+**msg = "Conexão estabelecida com o servidor TCP"
+client_socket.send(msg.encode('utf-8'))**
+
+Fechamento do Socket do Cliente:  
+Após enviar a mensagem, fechamos o socket do cliente usando o método close().  
+  **client_socket.close()**
 
 4) Analise usando o wireshark explicando os pacotes.
 
