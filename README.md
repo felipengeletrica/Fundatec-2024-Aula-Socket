@@ -123,65 +123,25 @@ Enquanto o TCP oferece garantia de entrega e controle de fluxo em troca de um ov
 
 ### Simple server UDP :
 
-1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
-Este código é um servidor UDP simples em Python usando o módulo socketserver. Vamos entender cada parte e o que o código faz:
+1) Subir o UDP server simple explicar os estados da conexão, bind, listen etc.
+1. **Implementando um servidor UDP simples em Python usando a biblioteca socketserver**
 
-Importando o Módulo socketserver:
-python
-Copy code
-import socketserver
-O módulo socketserver fornece classes para criar servidores de socket de maneira mais fácil e intuitiva.
-Definindo a Classe MyUDPHandler:
-python
-Copy code
-class MyUDPHandler(socketserver.BaseRequestHandler):
-    def handle(self):
-Esta classe é uma subclasse de socketserver.BaseRequestHandler, que define como lidar com solicitações de cliente. Aqui, estamos substituindo o método handle(), que é chamado sempre que uma nova solicitação é recebida pelo servidor.
-Tratamento da Solicitação UDP:
-python
-Copy code
-    data = self.request[0].strip()
-    socket = self.request[1]
-Dentro do método handle(), estamos recebendo os dados enviados pelo cliente e o socket associado à solicitação. Os dados recebidos são armazenados na variável data, e o socket é armazenado na variável socket.
-Processamento dos Dados e Resposta:
-python
-Copy code
-    print("{} wrote:".format(self.client_address[0]))
-    print(data)
-    socket.sendto(data.upper(), self.client_address)
-Aqui, estamos imprimindo os dados recebidos e o endereço IP do cliente que os enviou. Em seguida, estamos convertendo os dados para maiúsculas usando data.upper() e enviando de volta para o cliente usando socket.sendto(). O endereço do cliente é necessário para enviar a resposta de volta para o cliente correto.
-Configuração do Servidor UDP:
-python
-Copy code
-if __name__ == "__main__":
-    HOST, PORT = "localhost", 65431
-    with socketserver.UDPServer((HOST, PORT), MyUDPHandler) as server:
-        server.serve_forever()
-Aqui, estamos configurando o servidor UDP para escutar em um endereço e porta específicos. O servidor é iniciado com socketserver.UDPServer((HOST, PORT), MyUDPHandler), onde HOST é o endereço IP do servidor e PORT é a porta. Em seguida, o servidor é colocado em um loop infinito usando server.serve_forever(), o que significa que ele continuará a receber e processar solicitações de clientes indefinidamente.
+-bind O método `socketserver.UDPServer((HOST, PORT), MyUDPHandler)` é utilizado para associar (bind) o servidor a um endereço IP e porta específicos. Isso permite que o servidor escute (listen) por conexões UDP que chegam nesse endereço e porta.
+
+-handle O método `handle(self)` é chamado sempre que o servidor recebe uma mensagem. Ele lida com a mensagem recebida e responde de acordo. Neste caso, ele imprime a mensagem recebida em letras maiúsculas e a envia de volta para o cliente.
+
+-client_address O endereço do cliente é acessado através de `self.client_address`. Isso é útil para saber de onde veio a mensagem recebida.
+
+-listen No UDP, não há um estado de escuta (listen) como no TCP. O servidor está sempre pronto para receber mensagens e não precisa esperar por conexões como no TCP.
+
+No UDP, não há estados de conexão como no TCP. O servidor UDP está sempre pronto para receber mensagens e não mantém uma conexão persistente com os clientes. Ele simplesmente recebe mensagens, processa-as e envia respostas, se necessário. O método bind é usado para associar o servidor a um endereço e porta, mas não há um estado de escuta (listen) no UDP.
 
 
-2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
+2) Executar o programa de cliente simple server udp e verificar os estados da conexão.
 
-Entendendo o Cliente TCP:
-O cliente TCP é um programa que se conecta a um servidor TCP em uma determinada máquina e porta. Ele pode enviar dados para o servidor e receber respostas. No nosso caso, o cliente TCP que estamos usando é um programa simples em Python.
-Executando o Cliente TCP:
-Para executar o cliente TCP, você precisa seguir estas etapas:
-Abra um ambiente de desenvolvimento Python, como o IDLE ou um terminal.
-Cole o código do cliente TCP no ambiente de desenvolvimento.
-Certifique-se de modificar o código do cliente para usar o endereço IP e a porta corretos do servidor TCP que deseja se conectar. Por exemplo, se o servidor estiver em localhost (o mesmo computador em que você está executando o cliente) e estiver escutando na porta 8080, você deve definir HOST = 'localhost' e PORT = 8080.
-Execute o código do cliente.
-Verificando os Estados da Conexão:
-Durante a execução do cliente TCP, você pode verificar os estados da conexão observando as mensagens impressas no console. Aqui estão os estados comuns que você pode encontrar e o que significam:
-Conexão Estabelecida: Isso significa que o cliente conseguiu se conectar com sucesso ao servidor. Isso indica que o servidor está ativo e aceitando conexões na porta especificada.
-Conexão Encerrada: Isso indica que o cliente encerrou a conexão com o servidor. Pode acontecer imediatamente após a conexão ser estabelecida, dependendo do que o cliente está programado para fazer. Isso não indica necessariamente um problema, a menos que seja inesperado.
-Interpretando os Resultados:
-Se você vir "Conexão Estabelecida", isso é um bom sinal de que o cliente conseguiu se conectar ao servidor com sucesso.
-Se você vir "Conexão Encerrada", pode significar que o cliente completou sua tarefa e encerrou a conexão de forma adequada. No entanto, se isso acontecer imediatamente após "Conexão Estabelecida" e não for esperado, pode ser necessário investigar se há algum problema na comunicação.
-Depuração e Solução de Problemas:
-Se o cliente não conseguir se conectar ao servidor ou se a conexão for encerrada inesperadamente, você pode precisar fazer algumas verificações:
-Verifique se o servidor está ativo e escutando na porta especificada.
-Verifique se o endereço IP e a porta no cliente estão corretos e correspondem aos do servidor.
-Verifique se não há firewall ou restrições de rede que estejam bloqueando a comunicação entre o cliente e o servidor.
+Para criar um cliente UDP básico, não é necessário verificar estados de conexão. Isso se deve ao fato de que o UDP é um protocolo sem conexão, o que implica que não há necessidade de estabelecer, manter ou encerrar conexões como no TCP. Cada mensagem é tratada de forma independente, e não há garantia de que serão entregues ou recebidas na mesma ordem em que foram enviadas.
+
+Em um cliente UDP, não há "estados de conexão"  para serem verificados.
 
 3) Analise o código fonte
 Importando o Módulo socketserver:
