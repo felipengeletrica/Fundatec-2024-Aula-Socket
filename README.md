@@ -83,7 +83,6 @@ Após enviar a mensagem, fechamos o socket do cliente usando o método close().
 
 ### 4) Analise usando o wireshark explicando os pacotes.
 
-**Preparação:**
 O servidor está rodando o `echo-server.py` e o cliente está rodando o `echo-client.py`. Ambos estão configurados para se comunicar através do endereço IP `10.0.1.131` (localhost) e a porta `65432`.
 
 **Estabelecimento da Conexão:**
@@ -92,20 +91,23 @@ O servidor está rodando o `echo-server.py` e o cliente está rodando o `echo-cl
 3. O cliente então envia um pacote ACK (acknowledgement) confirmando a conexão, estabelecendo assim a conexão TCP.
 
 **Envio de Mensagem:**
-4. O cliente envia um pacote contendo a mensagem "Hello, world" para o servidor.
-5. O servidor recebe a mensagem e envia um pacote de confirmação (ACK) de volta para o cliente.
+
+4. O cliente envia um pacote contendo a mensagem "Hello, world" para o servidor.   
+5. O servidor recebe a mensagem e envia um pacote de confirmação (ACK) de volta para o cliente.    
 
 **Recebimento da Mensagem:**
-6. O servidor processa a mensagem recebida e envia um pacote contendo a mensagem de volta para o cliente.
-7. O cliente recebe a mensagem e confirma o recebimento com um pacote ACK.
+
+6. O servidor processa a mensagem recebida e envia um pacote contendo a mensagem de volta para o cliente.   
+7. O cliente recebe a mensagem e confirma o recebimento com um pacote ACK.    
 
 **Encerramento da Conexão:**
-8. Após a troca de mensagens, o cliente envia um pacote FIN (finalize) para encerrar a conexão.
-9. O servidor responde com um pacote ACK para confirmar o encerramento da conexão.
-10. O servidor então também envia um pacote FIN para encerrar a conexão do seu lado.
-11. O cliente responde com um pacote ACK confirmando o encerramento da conexão do lado do servidor.
 
-Essa sequência de pacotes é observada no Wireshark e representa a troca de mensagens entre o servidor e o cliente durante a comunicação TCP. Cada pacote tem um papel específico no estabelecimento, transmissão e encerramento da conexão TCP entre os dois.
+8. Após a troca de mensagens, o cliente envia um pacote FIN (finalize) para encerrar a conexão.    
+9. O servidor responde com um pacote ACK para confirmar o encerramento da conexão.    
+10. O servidor então também envia um pacote FIN para encerrar a conexão do seu lado.     
+11. O cliente responde com um pacote ACK confirmando o encerramento da conexão do lado do servidor.     
+
+Essa sequência de pacotes é observada no Wireshark e representa a troca de mensagens entre o servidor e o cliente durante a comunicação TCP. Cada pacote tem um papel específico no estabelecimento, transmissão e encerramento da conexão TCP entre os dois.               
 
 
 ![WiresharkTcp](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/wiresharktcp1.png?raw=true)
