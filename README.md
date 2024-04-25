@@ -1,25 +1,13 @@
 Estes sockets fazem parte das aulas de redes de computadores!
 
-Enjoy meus alunos!
-
-Alunos!!!
-
 # Trabalho socket
 
-Estes sockets fazem parte das aulas de redes de computadores!
-Enjoy meus alunos!
 
-Alunos!!!
-***
-## Sobre o trabalho
+## Simple server TCP :
 
-Documente com print e coloque aqui as respostas
+### 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
 
-### Simple server TCP :
-
-1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
-
-### Estados de conexão
+***Estados de conexão**
 
 SYN_SENT: o cliente envia uma solicitação de conexão (SYN) para o servidor.   
 SYN_RECEIVED: o servidor recebe a solicitação de conexão SYN e responde com sua própria solicitação de conexão SYN, ACK (acknowledgment).     
@@ -31,7 +19,7 @@ LISTENING: o servidor está esperando por conexões de entrada.
 ESTABLISHED: quando uma conexão é aceita pelo servidor, ela entra no estado ESTABLISH.   
 
 ***
-### Métodos utilizados:
+*** Métodos utilizados:***
 
 socket.socket(): Cria um objeto socket. AF_INET indica que estamos usando a família de endereços IPv4 e SOCK_STREAM indica que estamos usando TCP.  
 bind(): Liga o socket ao endereço (host) e porta especificados. Isso associa o servidor a uma interface de rede e a uma porta no host.    
@@ -42,14 +30,14 @@ close(): Fecha o socket.
 
 ![Listen,Bind](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/Server-TCP-SimplesEstadosCconex%C3%A3o.png?raw=true)
 
-2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
+### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
 
  Executado o "localhost" (192.168.0.21) na porta "65432", envia uma mensagem de teste ("Hello, world!").  
  Apresentando a frase "Hello, world" na tela.  
 
 ![Estado conexão](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/clientconexaoserver.png?raw=true)
 
-3) Analise o código fonte
+### 3) Analise o código fonte
 
 ```
 
@@ -91,10 +79,10 @@ Após enviar a mensagem, fechamos o socket do cliente usando o método close().
 ```
 ---
 
-4) Analise usando o wireshark explicando os pacotes.
+### 4) Analise usando o wireshark explicando os pacotes.
 
 
-5) Diferencie a conexão UDP de TCP
+### 5) Diferencie a conexão UDP de TCP
 
 UDP (User Datagram Protocol) e TCP (Transmission Control Protocol) são dois protocolos de transporte amplamente utilizados na comunicação de redes. Algumas diferenças entre eles:
 
@@ -123,28 +111,26 @@ Enquanto o TCP oferece garantia de entrega e controle de fluxo em troca de um ov
 
 ### Simple server UDP :
 
-1) Subir o UDP server simple explicar os estados da conexão, bind, listen etc.
+### 1) Subir o UDP server simple explicar os estados da conexão, bind, listen etc.
 
-1. **Implementando um servidor UDP simples em Python usando a biblioteca socketserver**
+ -**bind** O método `socketserver.UDPServer((HOST, PORT), MyUDPHandler)` é utilizado para associar (bind) o servidor a um endereço IP e porta específicos. Isso permite que o servidor escute (listen) por conexões UDP que chegam nesse endereço e porta.
 
- -bind O método `socketserver.UDPServer((HOST, PORT), MyUDPHandler)` é utilizado para associar (bind) o servidor a um endereço IP e porta específicos. Isso permite que o servidor escute (listen) por conexões UDP que chegam nesse endereço e porta.
+ -**handle** O método `handle(self)` é chamado sempre que o servidor recebe uma mensagem. Ele lida com a mensagem recebida e responde de acordo. Neste caso, ele imprime a mensagem recebida em letras maiúsculas e a envia de volta para o cliente.
 
- -handle O método `handle(self)` é chamado sempre que o servidor recebe uma mensagem. Ele lida com a mensagem recebida e responde de acordo. Neste caso, ele imprime a mensagem recebida em letras maiúsculas e a envia de volta para o cliente.
+ -**client_address** O endereço do cliente é acessado através de `self.client_address`. Isso é útil para saber de onde veio a mensagem recebida.
 
- -client_address O endereço do cliente é acessado através de `self.client_address`. Isso é útil para saber de onde veio a mensagem recebida.
-
- -listen No UDP, não há um estado de escuta (listen) como no TCP. O servidor está sempre pronto para receber mensagens e não precisa esperar por conexões como no TCP.
+ -**listen** No UDP, não há um estado de escuta (listen) como no TCP. O servidor está sempre pronto para receber mensagens e não precisa esperar por conexões como no TCP.
 
 No UDP, não há estados de conexão como no TCP. O servidor UDP está sempre pronto para receber mensagens e não mantém uma conexão persistente com os clientes. Ele simplesmente recebe mensagens, processa-as e envia respostas, se necessário. O método bind é usado para associar o servidor a um endereço e porta, mas não há um estado de escuta (listen) no UDP.
 
 
-2) Executar o programa de cliente simple server udp e verificar os estados da conexão.
+### 2) Executar o programa de cliente simple server udp e verificar os estados da conexão.
 
 Para criar um cliente UDP básico, não é necessário verificar estados de conexão. Isso se deve ao fato de que o UDP é um protocolo sem conexão, o que implica que não há necessidade de estabelecer, manter ou encerrar conexões como no TCP. Cada mensagem é tratada de forma independente, e não há garantia de que serão entregues ou recebidas na mesma ordem em que foram enviadas.
 
 Em um cliente UDP, não há "estados de conexão"  para serem verificados.
 
-3) Analise o código fonte
+### 3) Analise o código fonte
 
 ```
 import socketserver
@@ -191,132 +177,119 @@ if __name__ == "__main__":
 - **server.serve_forever()**: Este método mantém o servidor em execução continuamente, lidando com solicitações de clientes conforme elas chegam.
 
 
-4) Analise usando o wireshark explicando os pacotes.
+### 4) Analise usando o wireshark explicando os pacotes.
 
 ***
 
-### Multiserver TCP :
+## Multiserver TCP :
 
-1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
-Criação do Socket:
-python
-Copy code
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
-socket.AF_INET indica que estamos utilizando IPv4.
-socket.SOCK_STREAM indica que estamos criando um socket TCP.
-Bind:
-python
-Copy code
-server_socket.bind((HOST, PORT))
-A função bind() associa o socket a um endereço (HOST) e porta (PORT). Isso indica ao sistema operacional onde o servidor vai escutar por conexões de entrada.
-Listen:
-python
-Copy code
-server_socket.listen()
-A função listen() coloca o socket em modo de escuta, permitindo que ele aceite conexões de entrada.
-Accept:
-python
-Copy code
-client_socket, client_address = server_socket.accept()
-A função accept() bloqueia o programa e aguarda a chegada de uma conexão de cliente. Quando uma conexão é recebida, ela é aceita e um novo socket (client_socket) é criado para se comunicar com o cliente. client_address armazena o endereço do cliente.
-Fechando o Socket do Servidor:
-python
-Copy code
-print("Fechando o socket do servidor")
-Após a comunicação com o cliente, o socket do servidor pode ser fechado. Este passo é opcional e depende da lógica do seu aplicativo.
+### 1) Subir o tcp server simple explicar os estados da conexão, bind, listen etc.
 
-2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
+- **Bind (bind()):**
+  - Usamos o método `bind()` para vincular o socket ao endereço (HOST) e à porta (PORT) especificados. Isso associa o servidor a uma interface de rede e a uma porta no host.
 
-Neste script, que é executado localmente através do endereço "localhost" (127.0.0.1) e na porta "65432", é enviado uma mensagem de teste, que neste caso é "Hello, world!".
+- **Modo de Escuta (listen()):**
+  - Utilizamos o método `listen()` para colocar o socket no modo de escuta. O argumento passado indica o número máximo de conexões pendentes que podem ser enfileiradas para processamento.
 
-As quatro primeiras operações na lista são realizadas pelos servidores nessa sequência: a operação de criação de SOCKET estabelece um novo ponto de extremidade e reserva espaço de tabela para ele na entidade de transporte.
+- **Aceitação de Conexões (accept()):**
+  - Entramos em um loop infinito onde aguardamos e aceitamos conexões de clientes usando o método `accept()`. Quando uma conexão é aceita, um novo socket (`client_socket`) é criado para se comunicar com o cliente e o endereço do cliente (`client_address`) é retornado.
 
-As configurações de chamada determinam o formato de endereçamento a ser utilizado, o tipo de serviço desejado (como um fluxo de bytes confiável) e o protocolo a ser utilizado.
+- **Lida com Clientes (handle_client()):**
+  - Cada conexão de cliente é tratada em uma nova thread utilizando a função `handle_client()`. Dentro dessa função, podemos realizar operações de leitura e escrita de dados com o cliente.
 
-Uma chamada de SOCKET bem-sucedida retorna um identificador de arquivo comum, que será empregado em chamadas posteriores, semelhante a uma chamada OPEN em seu funcionamento.
+Esses são os principais aspectos a serem considerados ao subir um servidor TCP multi-cliente.Lidar com múltiplos clientes simultaneamente.
 
-Em seguida, a mensagem recebida "Hello, world" é apresentada na tela.
 
-3) Analise o código fonte
-Importação do Módulo socketserver:
-python
-Copy code
+### 2) Executar o programa de cliente simple server tcp e verificar os estados da conexão.
+
+Executado via "localhost" ( 192.168.0.21) na porta "65432", envia uma mensagem de teste ("Hello, world!").
+
+As quatro primeiras primitivas na lista são executadas pelos servidores a primitiva SOCKET cria um novo ponto final e aloca espaço de tabela para ele na entidade de transporte.
+
+O valor que é recebido "Hello, world".
+
+![Cliete Tcp](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/02ClientUDP.jpg?raw=true)
+
+### 3) Analise o código fonte
+
+```
 import socketserver
-Aqui, estamos importando o módulo socketserver, que fornece classes para criar servidores de socket de maneira mais fácil em Python.
-Definição da Classe MyTCPHandler:
-python
-Copy code
-class MyTCPHandler(socketserver.BaseRequestHandler):
-Esta classe é uma subclasse de socketserver.BaseRequestHandler e define o comportamento do servidor para manipular solicitações de clientes TCP.
-Docstring da Classe:
-python
-Copy code
-"""
-The RequestHandler class for our server.
 
-It is instantiated once per connection to the server, and must
-override the handle() method to implement communication to the
-client.
-"""
-Aqui, temos uma docstring que descreve o propósito da classe. Ela explica que a classe é responsável por lidar com solicitações de clientes no servidor e que a função handle() deve ser implementada para realizar a comunicação com o cliente.
-Método handle():
-python
-Copy code
-def handle(self):
-    self.data = self.request.recv(1024).strip()
-    print("{} wrote:".format(self.client_address[0]))
-    print(self.data)
-    self.request.sendall(self.data.upper())
-O método handle() é chamado sempre que o servidor recebe uma solicitação de um cliente TCP. Ele processa a solicitação e envia uma resposta de volta ao cliente. Aqui está o que está acontecendo dentro do método:
-self.request.recv(1024): Recebe dados do cliente, com um limite de 1024 bytes.
-print("{} wrote:".format(self.client_address[0])): Imprime o endereço IP do cliente que enviou os dados.
-print(self.data): Imprime os dados recebidos do cliente.
-self.request.sendall(self.data.upper()): Envia de volta ao cliente os dados recebidos convertidos para letras maiúsculas.
-Bloco de Execução Principal:
-python
-Copy code
+class MyTCPHandler(socketserver.BaseRequestHandler):
+    """
+    The RequestHandler class for our server.
+
+    It is instantiated once per connection to the server, and must
+    override the handle() method to implement communication to the
+    client.
+    """
+
+    def handle(self):
+        # self.request is the TCP socket connected to the client
+        self.data = self.request.recv(1024).strip()  # Recebe dados do cliente
+        print("{} wrote:".format(self.client_address[0]))  # Imprime o endereço do cliente
+        print(self.data)  # Imprime os dados recebidos do cliente
+        # just send back the same data, but upper-cased
+        self.request.sendall(self.data.upper())  # Envia os dados recebidos de volta ao cliente em maiúsculas
+
+
 if __name__ == "__main__":
     HOST, PORT = "localhost", 65432
+
+    # Create the server, binding to localhost on port 9999
     server = socketserver.TCPServer((HOST, PORT), MyTCPHandler)
-    server.timeout = 10
-    server.serve_forever()
-Neste bloco, estamos inicializando o servidor TCP. O servidor é configurado para escutar em localhost (127.0.0.1) na porta 65432. Em seguida, entramos em um loop infinito usando server.serve_forever(), o que significa que ele continuará a receber e processar solicitações de clientes indefinidamente.
-Este código cria um servidor TCP que recebe mensagens de clientes, converte as mensagens para maiúsculas e as envia de volta para os clientes. Ele ilustra o uso do módulo socketserver para simplificar a criação de servidores de socket em Python.
+
+    # Activate the server; this will keep running until you
+    # interrupt the program with Ctrl-C
+    server.timeout = 10  # Define um tempo limite para as conexões
+    server.serve_forever()  # Mantém o servidor em execução continuamente
+
+```
+
+- **Classe MyTCPHandler:**
+  - Esta classe é uma subclasse de `socketserver.BaseRequestHandler`, que é usada para manipular solicitações de clientes. O método `handle()` precisa ser sobrescrito para implementar a comunicação com o cliente.
+
+- **Método handle():**
+  - Dentro deste método, os dados recebidos do cliente são processados. Primeiro, os dados são recebidos usando `self.request.recv(1024)`, e em seguida são impressos na tela. Depois, os dados são enviados de volta para o cliente, mas em maiúsculas, usando `self.request.sendall(self.data.upper())`.
+
+- **Configuração do Servidor:**
+  - O servidor é criado usando `socketserver.TCPServer`, onde especificamos o HOST e a PORTA para a ligação. Em seguida, chamamos `server.serve_forever()` para ativar o servidor e fazê-lo escutar continuamente por novas conexões de clientes.
 
 
-4) Analise usando o wireshark explicando os pacotes.
+### 4) Analise usando o wireshark explicando os pacotes.
 
-5) Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark
+### 5) Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark
+
+Em redes de computadores, multi-conexões permitem que dispositivos estabeleçam várias comunicações simultâneas. Cada conexão é identificada por uma porta única, que muda a cada nova conexão para evitar conflitos e garantir a segurança das comunicações.
+
+![Mult](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/03ClientUDP.jpg?raw=true)
 
 ***
-### Conexão com máquina remota do colega :
+## Conexão com máquina remota do colega :
 
-1) Subir o tcp server na máquina do colega, verificar o IP da máquina (certifique que ele esteja na mesma rede que você)
-![Server 1](imagens/01ServerTCP.jpg)
+### 1) Subir o tcp server na máquina do colega, verificar o IP da máquina (certifique que ele esteja na mesma rede que você)
 
-2) Executar o programa cliente na sua máquina, não esqueça de modificar o IP para a máquina do seu colega.
+O servidor TCP foi configurado e em execução na máquina do meu colega. Inseri o endereço IP  e a porta específica na qual o servidor está ouvindo. E obtivi a permissão do meu colega antes de realizar a conexão.
 
-3) Demonstre com imagens que a conexão teve sucesso.
+### 2) Executar o programa cliente na sua máquina, não esqueça de modificar o IP para a máquina do seu colega.
 
-4) Usando wireshark mostra conexão filtrando pela portas.
+Para executar o programa cliente na minha máquina, me  certifiquei de modificar o endereço IP para o da máquina do seu colega. Depois disso, bastou iniciar o cliente e ele  se conectar automaticamente ao servidor na máquina do colega.
 
-Exemplo colocando código
+### 3) Demonstre com imagens que a conexão teve sucesso.
+***Server
 
-```python
-# echo-client.py
+![Server](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/01ServerTCP.jpg?raw=true)
 
-import socket
+***Client
 
-HOST = "127.0.0.1"  # The server's hostname or IP address
-PORT = 65432  # The port used by the server
+![Client](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/02ClientUDP.jpg?raw=true)
 
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.connect((HOST, PORT))
-    s.sendall(b"Hello, world")
-    data = s.recv(1024)
+### 4) Usando wireshark mostra conexão filtrando pela portas.
 
-print(f"Received {str(data)}")
-```
+Aqui conseguimos ver a mensagem envia, filtrando pelas portas no wireshark.
+
+![conex](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/02ServerTCP.jpg?raw=true)
+
 
 
 
