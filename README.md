@@ -19,7 +19,6 @@
 * LISTENING: o servidor está esperando por conexões de entrada.
 * ESTABLISHED: quando uma conexão é aceita pelo servidor, ela entra no estado ESTABLISH.
 
-***
 **Métodos utilizados:**
 
 * socket.socket(): Cria um objeto socket. AF_INET indica que estamos usando a família de endereços IPv4 e SOCK_STREAM indica que estamos usando TCP.
