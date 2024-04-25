@@ -10,7 +10,7 @@
 
 
 
-![Screenshot (46)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/e743c957-e7b7-432a-9006-9fb2f0d95878)
+![img_1](Image/img_1_SimpleServerTCP.png)
 
 
 
@@ -41,14 +41,13 @@ A principal diferença entre TCP (protocolo de controle de transmissão) e UDP (
 
 ### Simple server UDP :
 
-![Screenshot (47)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/df872649-cfca-47dc-8d90-e5254d958166)
-
+![img_2](Image/img_2_SimpleServerUDP.png)
 
 ***
 
 ### Multiserver TCP:
 
-![Screenshot (48)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/61fd9236-bca1-488a-b7a9-899cef02f4d8)
+![img_3](Image/img_3_MultiServerTCP.png)
 
 ### 1. Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark
 
@@ -64,12 +63,12 @@ A porta de origem do cliente também pode variar, mas isso é gerenciado pelo pr
 ***
 ### Conexão com máquina remota com o Vitor Alicer:
 
-![Captura de Tela (19)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/a4ebfa34-8ed5-4d91-bfa3-c6298af8a831)
+![img_4](Image/img_4_ConexãoRemota.png)
 
 ***
 
 ### WireShark
-![Captura de Tela (20)](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/assets/112041509/5bf95972-52ff-49bd-b734-dd3a744a0711)
+![img_5](Image/img_5_WireShark.png)
 
 
 
