@@ -86,7 +86,7 @@ client_socket.send(msg.encode('utf-8'))**
 
 Fechamento do Socket do Cliente:  
 Após enviar a mensagem, fechamos o socket do cliente usando o método close().  
-  **client_socket.close()**
+  **client_socket.close()**``` ´´´
 
 4) Analise usando o wireshark explicando os pacotes.
 
