@@ -51,10 +51,11 @@ close(): Fecha o socket.
 
 3) Analise o código fonte
 
+```
 ### Importação do Módulo `socket`:
-O primeiro passo é importar o módulo `socket`, que fornece suporte para sockets no Python.
 
-```python
+O primeiro passo é importar o módulo `socket`, que fornece suporte para sockets no Python.  
+
 import socket  
 
 Criação do Socket do Servidor:
@@ -88,23 +89,37 @@ Fechamento do Socket do Cliente:
 Após enviar a mensagem, fechamos o socket do cliente usando o método close().  
   **client_socket.close()**
 
+```
+
 4) Analise usando o wireshark explicando os pacotes.
 
+
 5) Diferencie a conexão UDP de TCP
-TCP (Transmission Control Protocol):
-Confiabilidade: TCP é um protocolo orientado à conexão, o que significa que é altamente confiável. Ele garante que os dados sejam entregues na ordem correta e sem erros.
-Controle de Fluxo: TCP implementa controle de fluxo, o que evita que o remetente sobrecarregue o receptor com dados muito rapidamente. Ele ajusta a taxa de transmissão com base na capacidade do receptor de processar os dados.
-Controle de Congestionamento: Além do controle de fluxo, TCP também lida com o controle de congestionamento. Ele ajusta a taxa de transmissão com base na condição da rede, evitando congestionamentos e garantindo uma melhor utilização da largura de banda disponível.
-Handshake de Conexão: Antes de iniciar a transferência de dados, TCP estabelece uma conexão bidirecional entre o cliente e o servidor por meio de um handshake de três vias (SYN, SYN-ACK, ACK). Isso garante que ambos os lados estejam prontos para enviar e receber dados.
-Orientado a Bytes: TCP é orientado a bytes, o que significa que os dados são transmitidos em sequência, e o receptor recebe os bytes na mesma ordem em que foram enviados.
-Overhead: TCP tem um overhead maior em comparação com UDP devido aos mecanismos de garantia de entrega, controle de fluxo e controle de congestionamento.
-UDP (User Datagram Protocol):
-Não Orientado à Conexão: UDP é um protocolo não orientado à conexão, o que significa que ele não estabelece uma conexão antes de enviar os dados. Os pacotes são simplesmente enviados para o destino sem garantia de entrega ou ordem.
-Sem Garantia de Entrega: UDP não oferece garantia de entrega dos dados. Os pacotes podem ser perdidos, duplicados ou entregues fora de ordem. Não há mecanismos embutidos para detecção ou correção de erros.
-Sem Controle de Fluxo ou Congestionamento: Ao contrário do TCP, UDP não implementa controle de fluxo ou controle de congestionamento. Isso significa que os dados são enviados na taxa máxima possível, independentemente da capacidade da rede.
-Baixo Overhead: UDP tem um overhead menor em comparação com TCP devido à falta de mecanismos de controle e garantia de entrega.
-Ideal para Aplicações de Tempo Real: Devido à sua baixa latência e falta de overhead, UDP é frequentemente usado em aplicações de tempo real, como jogos online, transmissão de vídeo e voz sobre IP (VoIP), onde a latência é crítica e uma pequena perda de dados é aceitável.
-***
+
+UDP (User Datagram Protocol) e TCP (Transmission Control Protocol) são dois protocolos de transporte amplamente utilizados na comunicação de redes. Algumas diferenças entre eles:
+
+1. **Confiabilidade e Garantia de Entrega:**
+   - TCP: É um protocolo orientado à conexão, garantindo a entrega ordenada e confiável dos dados. Ele faz uso de confirmações e retransmissões para garantir que os dados sejam entregues corretamente e na ordem correta.
+   - UDP: É um protocolo não orientado à conexão, o que significa que não há garantia de entrega ou ordem de entrega dos pacotes. Os pacotes podem ser perdidos ou chegar fora de ordem, e não há mecanismo embutido para retransmiti-los automaticamente.
+
+2. **Overhead:**
+   - TCP: Devido aos mecanismos de controle de fluxo, controle de congestionamento e garantia de entrega, o TCP tende a ter um overhead maior em comparação com o UDP.
+   - UDP: Sendo um protocolo mais simples, o UDP tem um overhead menor em comparação com o TCP.
+
+3. **Conexão:**
+   - TCP: Estabelece uma conexão antes de iniciar a transferência de dados. Isso inclui uma fase de handshaking para estabelecer parâmetros de comunicação entre as partes.
+   - UDP: Não estabelece uma conexão antes de enviar os dados. Os pacotes podem ser enviados sem a necessidade de handshaking ou estabelecimento de conexão.
+
+4. **Aplicações típicas:**
+   - TCP: É mais adequado para aplicações que requerem entrega confiável de dados e controle de fluxo, como transferência de arquivos, navegação na web e email.
+   - UDP: É usado em aplicações onde a latência é crítica ou onde a perda de alguns pacotes não é tão crucial, como jogos online, streaming de mídia e voz sobre IP (VoIP).
+
+5. **Velocidade:**
+   - TCP: Devido ao seu mecanismo de garantia de entrega e controle de fluxo, o TCP pode ser mais lento em comparação com o UDP, especialmente em redes com alta latência ou perda de pacotes.
+   - UDP: Como não há overhead para garantia de entrega e controle de fluxo, o UDP tende a ser mais rápido do que o TCP em situações onde a latência é crítica.
+
+Enquanto o TCP oferece garantia de entrega e controle de fluxo em troca de um overhead maior, o UDP oferece baixa latência e velocidade, mas não garante a entrega dos pacotes. A escolha entre TCP e UDP depende das necessidades específicas da aplicação e das características da rede em questão.
+
 
 ### Simple server UDP :
 
