@@ -124,15 +124,16 @@ Enquanto o TCP oferece garantia de entrega e controle de fluxo em troca de um ov
 ### Simple server UDP :
 
 1) Subir o UDP server simple explicar os estados da conexão, bind, listen etc.
+
 1. **Implementando um servidor UDP simples em Python usando a biblioteca socketserver**
 
--bind O método `socketserver.UDPServer((HOST, PORT), MyUDPHandler)` é utilizado para associar (bind) o servidor a um endereço IP e porta específicos. Isso permite que o servidor escute (listen) por conexões UDP que chegam nesse endereço e porta.
+ -bind O método `socketserver.UDPServer((HOST, PORT), MyUDPHandler)` é utilizado para associar (bind) o servidor a um endereço IP e porta específicos. Isso permite que o servidor escute (listen) por conexões UDP que chegam nesse endereço e porta.
 
--handle O método `handle(self)` é chamado sempre que o servidor recebe uma mensagem. Ele lida com a mensagem recebida e responde de acordo. Neste caso, ele imprime a mensagem recebida em letras maiúsculas e a envia de volta para o cliente.
+ -handle O método `handle(self)` é chamado sempre que o servidor recebe uma mensagem. Ele lida com a mensagem recebida e responde de acordo. Neste caso, ele imprime a mensagem recebida em letras maiúsculas e a envia de volta para o cliente.
 
--client_address O endereço do cliente é acessado através de `self.client_address`. Isso é útil para saber de onde veio a mensagem recebida.
+ -client_address O endereço do cliente é acessado através de `self.client_address`. Isso é útil para saber de onde veio a mensagem recebida.
 
--listen No UDP, não há um estado de escuta (listen) como no TCP. O servidor está sempre pronto para receber mensagens e não precisa esperar por conexões como no TCP.
+ -listen No UDP, não há um estado de escuta (listen) como no TCP. O servidor está sempre pronto para receber mensagens e não precisa esperar por conexões como no TCP.
 
 No UDP, não há estados de conexão como no TCP. O servidor UDP está sempre pronto para receber mensagens e não mantém uma conexão persistente com os clientes. Ele simplesmente recebe mensagens, processa-as e envia respostas, se necessário. O método bind é usado para associar o servidor a um endereço e porta, mas não há um estado de escuta (listen) no UDP.
 
@@ -144,50 +145,51 @@ Para criar um cliente UDP básico, não é necessário verificar estados de cone
 Em um cliente UDP, não há "estados de conexão"  para serem verificados.
 
 3) Analise o código fonte
-Importando o Módulo socketserver:
-python
-Copy code
+
+```
 import socketserver
-O módulo socketserver fornece classes para criar facilmente servidores de socket em Python.
-Definindo a Classe MyUDPHandler:
-python
-Copy code
+
 class MyUDPHandler(socketserver.BaseRequestHandler):
-Esta classe é uma subclasse de socketserver.BaseRequestHandler e define o comportamento do servidor para manipular solicitações de clientes UDP.
-Docstring da Classe:
-python
-Copy code
-"""
-This class works similar to the TCP handler class, except that
-self.request consists of a pair of data and client socket, and since
-there is no connection the client address must be given explicitly
-when sending data back via sendto().
-"""
-Este é o docstring da classe, uma string de documentação que explica o propósito da classe e seu funcionamento. Ele descreve que a classe é semelhante à classe de manipulador TCP, mas lida com conexões UDP, onde não há conexão estabelecida entre o servidor e o cliente.
-Método handle():
-python
-Copy code
-def handle(self):
-    data = self.request[0].strip()
-    socket = self.request[1]
-    print("{} wrote:".format(self.client_address[0]))
-    print(data)
-    socket.sendto(data.upper(), self.client_address)
-O método handle() é chamado sempre que o servidor recebe uma solicitação de um cliente UDP. Ele é responsável por processar a solicitação e enviar uma resposta ao cliente.
-data = self.request[0].strip(): Extrai os dados recebidos do cliente, removendo quaisquer espaços em branco do início e do final.
-socket = self.request[1]: Extrai o socket associado à solicitação do cliente.
-print("{} wrote:".format(self.client_address[0])): Imprime o endereço IP do cliente que enviou os dados.
-print(data): Imprime os dados recebidos do cliente.
-socket.sendto(data.upper(), self.client_address): Converte os dados recebidos para maiúsculas e envia-os de volta para o cliente usando socket.sendto(), fornecendo o endereço do cliente explicitamente.
-Bloco de Execução Principal:
-python
-Copy code
+    """
+    Esta classe funciona de forma semelhante à classe de manipulador TCP, exceto que
+    self.request consiste em um par de dados e soquete do cliente, e como
+    não há conexão, o endereço do cliente deve ser fornecido explicitamente
+    ao enviar dados de volta via sendto().
+    """
+
+    def handle(self):
+        # Recebe os dados e o soquete do cliente
+        data = self.request[0].strip()
+        socket = self.request[1]
+        
+        # Imprime os dados recebidos
+        print("{} escreveu:".format(self.client_address[0]))
+        print(data)
+        
+        # Envia de volta os dados em maiúsculas para o cliente
+        socket.sendto(data.upper(), self.client_address)
+
 if __name__ == "__main__":
+    # Define o endereço do servidor e a porta
     HOST, PORT = "localhost", 65431
+    
+    # Cria um servidor UDP com o endereço e a porta especificados, usando MyUDPHandler para lidar com as solicitações
     with socketserver.UDPServer((HOST, PORT), MyUDPHandler) as server:
+        # Mantém o servidor em execução continuamente
         server.serve_forever()
-Este bloco é o ponto de entrada do programa. Ele define o endereço e a porta em que o servidor UDP irá escutar por solicitações de clientes e inicializa o servidor UDP usando a classe socketserver.UDPServer. Em seguida, o servidor é colocado em um loop infinito usando server.serve_forever(), o que significa que ele continuará a receber e processar solicitações de clientes indefinidamente.
-Em resumo, este código implementa um servidor UDP simples em Python que recebe mensagens de clientes, converte as mensagens para maiúsculas e as envia de volta para os clientes. Ele usa a classe socketserver.BaseRequestHandler para definir o comportamento do servidor ao lidar com solicitações de clientes UDP.
+
+```
+
+- **socketserver.BaseRequestHandler**: Esta é uma classe base fornecida pelo módulo `socketserver` do Python para lidar com solicitações de clientes. Aqui, estamos criando uma subclasse chamada `MyUDPHandler`.
+
+- **handle(self)**: Este método é chamado quando uma solicitação é recebida. Aqui, estamos recebendo os dados e o soquete do cliente, imprimindo os dados recebidos e enviando de volta os dados em maiúsculas para o cliente.
+
+- **if __name__ == "__main__"**: Esta é uma construção comum em Python para verificar se o script está sendo executado como um programa principal. Se for o caso, o código dentro deste bloco será executado.
+
+- **socketserver.UDPServer((HOST, PORT), MyUDPHandler)**: Aqui, estamos criando um servidor UDP na máquina local (`localhost`) e na porta especificada (`65431`). Estamos passando a classe `MyUDPHandler` como o manipulador de solicitações para o servidor.
+
+- **server.serve_forever()**: Este método mantém o servidor em execução continuamente, lidando com solicitações de clientes conforme elas chegam.
+
 
 4) Analise usando o wireshark explicando os pacotes.
 
