@@ -337,7 +337,7 @@ O servidor então também envia um pacote FIN para encerrar a conexão do seu la
 O cliente responde com um pacote ACK confirmando o encerramento da conexão do lado do servidor.
 Essa sequência de pacotes, observada no Wireshark, representa a troca de mensagens entre o servidor e o cliente durante sua comunicação TCP. Cada pacote desempenha um papel específico no estabelecimento, transmissão e encerramento da conexão TCP entre os dois.
 
-![]()
+![WiresharkMult](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/wiresharkmulti.png?raw=true)
 
 ### 5) Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark
 
