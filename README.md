@@ -105,7 +105,7 @@ O servidor então também envia um pacote FIN para encerrar a conexão do seu la
 O cliente responde com um pacote ACK confirmando o encerramento da conexão do lado do servidor.
 Essa sequência de pacotes é observada no Wireshark e representa a troca de mensagens entre o servidor e o cliente durante a comunicação TCP. Cada pacote tem um papel específico na estabelecimento, transmissão e encerramento da conexão TCP entre os dois.
 
-![WiresharkTcp]()
+![WiresharkTcp](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/wiresharktcp1.png?raw=true)
 
 ### 5) Diferencie a conexão UDP de TCP
 
@@ -203,6 +203,34 @@ if __name__ == "__main__":
 
 
 ### 4) Analise usando o wireshark explicando os pacotes.
+
+No Wireshark, podemos analisar a interação entre o servidor e o cliente durante sua comunicação TCP. Aqui está uma recapitulação dos eventos:
+
+Preparação:
+O servidor executa o script echo-server.py, enquanto o cliente roda echo-client.py. Ambos estão configurados para se comunicar via endereço IP 127.0.0.1 (localhost) e porta 65432.
+
+Estabelecimento da Conexão:
+
+O cliente inicia a conexão enviando um pacote SYN.
+O servidor responde com um pacote SYN-ACK para confirmar a conexão.
+O cliente envia um pacote ACK, estabelecendo assim a conexão TCP.
+Envio de Mensagem:
+4. O cliente transmite um pacote com a mensagem "Hello, world" para o servidor.
+
+O servidor, após receber a mensagem, responde com um pacote de confirmação (ACK) para o cliente.
+Recebimento da Mensagem:
+6. O servidor processa a mensagem e a envia de volta ao cliente em um pacote.
+
+O cliente, ao receber a mensagem, confirma com um pacote ACK.
+Encerramento da Conexão:
+8. Após a troca de mensagens, o cliente envia um pacote FIN para terminar a conexão.
+
+O servidor responde com um pacote ACK para confirmar o encerramento.
+O servidor então envia um pacote FIN para encerrar sua parte da conexão.
+O cliente responde com um pacote ACK para confirmar o encerramento do servidor.
+Essa sequência de eventos, observada no Wireshark, representa a troca de pacotes entre o servidor e o cliente durante sua comunicação TCP, cada um desempenhando um papel específico no estabelecimento, transmissão e encerramento da conexão entre os dois.
+
+![Wireshark]()
 
 ***
 
