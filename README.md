@@ -230,7 +230,7 @@ O servidor então envia um pacote FIN para encerrar sua parte da conexão.
 O cliente responde com um pacote ACK para confirmar o encerramento do servidor.
 Essa sequência de eventos, observada no Wireshark, representa a troca de pacotes entre o servidor e o cliente durante sua comunicação TCP, cada um desempenhando um papel específico no estabelecimento, transmissão e encerramento da conexão entre os dois.
 
-![Wireshark]()
+![Wireshark](https://github.com/felipengeletrica/Fundatec-2024-Aula-Socket/blob/Trabalho_Tharsila/imagens/wiresharkudp.png?raw=true)
 
 ***
 
@@ -310,6 +310,34 @@ if __name__ == "__main__":
 
 
 ### 4) Analise usando o wireshark explicando os pacotes.
+
+No Wireshark, podemos observar a interação entre o servidor e o cliente durante sua comunicação TCP. Aqui está uma recapitulação dos eventos:  
+
+Configuração Inicial:  
+O servidor está executando o script echo-server.py, enquanto o cliente está executando echo-client.py. Ambos estão configurados para se comunicar através do endereço IP 127.0.0.1 (localhost) e da porta 65432.  
+
+Estabelecimento da Conexão:  
+
+O cliente envia um pacote SYN para iniciar a conexão com o servidor.  
+O servidor responde com um pacote SYN-ACK confirmando a conexão.  
+O cliente então envia um pacote ACK para confirmar a conexão, estabelecendo assim a conexão TCP.
+Envio de Mensagem:  
+4. O cliente envia um pacote contendo a mensagem "Hello, world" para o servidor.  
+
+O servidor recebe a mensagem e envia um pacote de confirmação (ACK) de volta para o cliente.
+Recebimento da Mensagem:  
+6. O servidor processa a mensagem recebida e envia um pacote contendo a mensagem de volta para o cliente.
+
+O cliente recebe a mensagem e confirma o recebimento com um pacote ACK.
+Encerramento da Conexão:
+8. Após a troca de mensagens, o cliente envia um pacote FIN para encerrar a conexão.
+
+O servidor responde com um pacote ACK para confirmar o encerramento da conexão.
+O servidor então também envia um pacote FIN para encerrar a conexão do seu lado.
+O cliente responde com um pacote ACK confirmando o encerramento da conexão do lado do servidor.
+Essa sequência de pacotes, observada no Wireshark, representa a troca de mensagens entre o servidor e o cliente durante sua comunicação TCP. Cada pacote desempenha um papel específico no estabelecimento, transmissão e encerramento da conexão TCP entre os dois.
+
+![]()
 
 ### 5) Explique as diferenças de multi conexões e porque a cada conexão a porta "muda". Demonstre a mudança de porta usando o Wireshark
 
