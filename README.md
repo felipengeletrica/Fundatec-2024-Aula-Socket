@@ -54,7 +54,7 @@ close(): Fecha o socket.
 ### Importação do Módulo `socket`:
 O primeiro passo é importar o módulo `socket`, que fornece suporte para sockets no Python.
 
-```python
+
 import socket  
 
 Criação do Socket do Servidor:
@@ -86,7 +86,7 @@ client_socket.send(msg.encode('utf-8'))**
 
 Fechamento do Socket do Cliente:  
 Após enviar a mensagem, fechamos o socket do cliente usando o método close().  
-  **client_socket.close()**``` ´´´
+  **client_socket.close()**
 
 4) Analise usando o wireshark explicando os pacotes.
 
